@@ -6068,11 +6068,11 @@
       }
     ],
     "type": "Prefix",
-    "displayName": "#% increased Physical Damage (Local)\n+# to Accuracy Rating (Local)",
+    "displayName": "#% increased Physical Damage\n+# to Accuracy Rating (Local)",
     "hybridStats": [
       {
-        "id": "NOT_FOUND",
-        "text": "#% increased Physical Damage (Local)"
+        "id": "fractured.stat_1509134228",
+        "text": "#% increased Physical Damage"
       },
       {
         "id": "fractured.stat_691932474",
