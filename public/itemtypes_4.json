@@ -1229,6 +1229,7 @@
     "Minion Wand": [
       "AllGemChaos",
       "AllGemCold",
+      "AllGemFire",
       "AllGemLightning",
       "AllGemMinion",
       "AllGemPhysical",
@@ -1294,6 +1295,7 @@
     "Rune Dagger": [
       "AllGemChaos",
       "AllGemCold",
+      "AllGemFire",
       "AllGemLightning",
       "AllGemMinion",
       "AllGemPhysical",
@@ -1424,6 +1426,7 @@
     "Wand": [
       "AllGemChaos",
       "AllGemCold",
+      "AllGemFire",
       "AllGemLightning",
       "AllGemMinion",
       "AllGemPhysical",

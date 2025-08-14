@@ -14,6 +14,11 @@ interface ModifierFamily {
     stat: string;
   }>;
   displayName?: string;
+  fracturedStatId?: string;
+  hybridStats?: Array<{
+    id: string;
+    text: string;
+  }>;
 }
 
 interface FamiliesData {
@@ -90,6 +95,24 @@ const App: React.FC = () => {
   // Track which family is currently being edited
   const [activeFamily, setActiveFamily] = useState<string | null>(null);
 
+  // Check Trade form state
+  const [tradeFormData, setTradeFormData] = useState({
+    item: '',
+    mod: '',
+    min: '',
+    max: '',
+    mod2: '',
+    min2: '',
+    max2: '',
+    itemLevel: '86',
+    league: 'Mercenaries',
+    familyName: '',
+    isHybrid: false
+  });
+  
+  // Autoselect collapse state
+  const [autoselectExpanded, setAutoselectExpanded] = useState(false);
+
   // Drag state for basetype painting
   const [isDragging, setIsDragging] = useState(false);
   // const [dragStartIndex, setDragStartIndex] = useState<number | null>(null);
@@ -101,6 +124,7 @@ const App: React.FC = () => {
     type: 'all' | 'equipment' | 'subcategory' | 'clear' | null;
     blinkingButton: string | null;
   }>({ type: null, blinkingButton: null });
+
 
   // Check if current item type uses non-tiered basetypes
   const isNonTieredBasetype = (equipment: string): boolean => {
@@ -154,7 +178,7 @@ const App: React.FC = () => {
     const fetchData = async () => {
       try {
         const [familiesRes, itemtypeRes, basetypeRes, groupingsRes] = await Promise.all([
-          fetch(import.meta.env.BASE_URL + 'modifierFamiliesDisplay_7.json'),
+          fetch(import.meta.env.BASE_URL + 'modifierFamiliesDisplay_9.json'),
           fetch(import.meta.env.BASE_URL + 'itemtypes_4.json'),
           fetch(import.meta.env.BASE_URL + 'basetypes_5.json'),
           fetch(import.meta.env.BASE_URL + 'groupings.json'),
@@ -230,6 +254,211 @@ const App: React.FC = () => {
     if (!selectedEquipment || !selectedSubcategory) return null;
     return modButtonSelections[selectedEquipment]?.[selectedSubcategory]?.[familyName] || null;
   }, [selectedEquipment, selectedSubcategory, modButtonSelections]);
+
+  // Parse minimum value from stat text
+  const parseMinValueFromStat = (statText: string): string => {
+    try {
+      // Patterns to match:
+      // "+(46-48)% to Fire Resistance" -> "46"
+      // "+15 to maximum Mana" -> "15" 
+      // "Adds (12-20) to (25-42) Lightning Damage" -> average of 12 and 25 = 18.5, rounded down to 18.5
+      
+      // First, extract all numbers from the text
+      const numbers = statText.match(/\d+(\.\d+)?/g);
+      if (!numbers || numbers.length === 0) return '';
+      
+      // Check if this looks like a double range pattern (Adds X to Y to Z to W)
+      const doubleRangeMatch = statText.match(/Adds \((\d+)-\d+\) to \((\d+)-\d+\)/);
+      if (doubleRangeMatch) {
+        const firstMin = parseInt(doubleRangeMatch[1]);
+        const secondMin = parseInt(doubleRangeMatch[2]);
+        const average = (firstMin + secondMin) / 2;
+        return average.toString();
+      }
+      
+      // For single ranges or single values, take the first number
+      return numbers[0];
+    } catch (error) {
+      return '';
+    }
+  };
+
+  // Handle clicking on preview items to populate trade form
+  const handlePreviewItemClick = (stat: string, base: string, familyName: string) => {
+    try {
+      const family = families[familyName];
+      if (!family) return;
+      
+      // Check if this is a hybrid family
+      if (family?.hybridStats) {
+        // Parse the hybrid displayName to get individual components
+        const displayParts = family.displayName?.split('\n') || [];
+        const statParts = stat.split('\n') || [stat];
+        
+        // Extract min values for both parts
+        const minValue1 = parseMinValueFromStat(statParts[0] || '');
+        const minValue2 = parseMinValueFromStat(statParts[1] || '');
+        
+        // Get default item level based on current equipment and subcategory
+        const defaultItemLevel = getDefaultItemLevel(lastSelectedInfo?.equipment || '', lastSelectedInfo?.subcategory);
+        
+        // Update form for hybrid modifier
+        setTradeFormData({
+          item: base,
+          mod: displayParts[0] || family.hybridStats[0]?.text || '',
+          min: minValue1,
+          max: '',
+          mod2: displayParts[1] || family.hybridStats[1]?.text || '',
+          min2: minValue2,
+          max2: '',
+          itemLevel: defaultItemLevel,
+          league: tradeFormData.league,
+          familyName: familyName,
+          isHybrid: true
+        });
+      } else {
+        // Non-hybrid modifier
+        let modText = stat;
+        if (family?.displayName) {
+          modText = family.displayName;
+        }
+        
+        const minValue = parseMinValueFromStat(stat);
+        
+        // Get default item level based on current equipment and subcategory
+        const defaultItemLevel = getDefaultItemLevel(lastSelectedInfo?.equipment || '', lastSelectedInfo?.subcategory);
+        
+        // Update form and clear hybrid fields
+        setTradeFormData({
+          item: base,
+          mod: modText,
+          min: minValue,
+          max: '',
+          mod2: '', // Clear hybrid fields
+          min2: '',
+          max2: '',
+          itemLevel: defaultItemLevel,
+          league: tradeFormData.league,
+          familyName: familyName,
+          isHybrid: false
+        });
+      }
+      
+      // Log parsing failures for review (check both hybrid and non-hybrid cases)
+      const hasParsingFailure = family?.hybridStats ? 
+        (!parseMinValueFromStat(stat.split('\n')[0] || '') && !parseMinValueFromStat(stat.split('\n')[1] || '')) :
+        (!parseMinValueFromStat(stat));
+        
+      if (hasParsingFailure) {
+        console.warn('Failed to parse min value from:', stat);
+        const timestamp = new Date().toISOString();
+        const logEntry = `[${timestamp}] Family: ${familyName} | Stat: ${stat} | Error: Failed to extract minimum value\n`;
+        
+        // In a real app, you'd send this to a server or use a proper logging system
+        // For now, we'll just console.warn and the user can check the browser console
+        console.warn('PARSING FAILURE LOGGED:', logEntry);
+      }
+      
+    } catch (error) {
+      console.error('Error handling preview item click:', error);
+    }
+  };
+
+  // Generate PoE trade URL from form data
+  const generatePoETradeURL = (familyName?: string) => {
+    try {
+      console.log('Trade form data:', tradeFormData);
+      
+      if (!tradeFormData.item || !tradeFormData.mod) {
+        console.warn('Missing required data for trade URL generation', {
+          item: tradeFormData.item,
+          mod: tradeFormData.mod
+        });
+        return null;
+      }
+
+      // Build stat filters based on hybrid vs non-hybrid
+      let statFilters = [];
+      
+      if (familyName && families[familyName]) {
+        const family = families[familyName];
+        
+        if (family.hybridStats && tradeFormData.isHybrid) {
+          // Handle hybrid stats - create filter for each component
+          for (let i = 0; i < family.hybridStats.length; i++) {
+            const hybridStat = family.hybridStats[i];
+            const minField = i === 0 ? tradeFormData.min : tradeFormData.min2;
+            const maxField = i === 0 ? tradeFormData.max : tradeFormData.max2;
+            
+            statFilters.push({
+              id: hybridStat.id,
+              value: {
+                ...(minField ? { min: parseInt(minField) } : {}),
+                ...(maxField ? { max: parseInt(maxField) } : {})
+              }
+            });
+          }
+        } else if (family.fracturedStatId) {
+          // Handle regular single stat
+          statFilters.push({
+            id: family.fracturedStatId,
+            value: {
+              ...(tradeFormData.min ? { min: parseInt(tradeFormData.min) } : {}),
+              ...(tradeFormData.max ? { max: parseInt(tradeFormData.max) } : {})
+            }
+          });
+        }
+      }
+
+      if (statFilters.length === 0) {
+        console.warn('Could not create stat filters for mod:', tradeFormData.mod);
+        return null;
+      }
+
+      // Build the query object
+      const query = {
+        query: {
+          status: { option: "any" },
+          type: tradeFormData.item,
+          stats: [{
+            type: "and",
+            filters: statFilters
+          }],
+          filters: {
+            misc_filters: {
+              filters: {
+                ...(tradeFormData.itemLevel ? { ilvl: { min: parseInt(tradeFormData.itemLevel) } } : {})
+              }
+            }
+          }
+        },
+        sort: { price: "asc" }
+      };
+
+      // Encode the query
+      const encodedQuery = encodeURIComponent(JSON.stringify(query));
+      
+      // Build the URL
+      const baseUrl = "https://www.pathofexile.com/trade/search";
+      const league = tradeFormData.league || "Standard";
+      const url = `${baseUrl}/${league}/?q=${encodedQuery}`;
+
+      return url;
+    } catch (error) {
+      console.error('Error generating PoE trade URL:', error);
+      return null;
+    }
+  };
+
+  // Handle opening PoE trade
+  const handleOpenPoETrade = () => {
+    const url = generatePoETradeURL(tradeFormData.familyName);
+    if (url) {
+      window.open(url, '_blank');
+    } else {
+      alert('Could not generate trade URL. Please check that Item and Mod fields are filled correctly.');
+    }
+  };
 
   // Get selected tiers for a family
   const getSelectedTiers = useCallback((familyName: string): { good: string[], ok: string[] } => {
@@ -747,7 +976,8 @@ const App: React.FC = () => {
     const stateObj = {
       tierSelections,
       basetypeSelections,
-      modButtonSelections
+      modButtonSelections,
+      checkTradeLeague: tradeFormData.league
     };
     return encodeState(stateObj);
   };
@@ -949,6 +1179,14 @@ Class == "Jewel"
         setTierSelections(decoded.tierSelections || {});
         setBasetypeSelections(processedBasetypeSelections);
         setModButtonSelections(decoded.modButtonSelections || {});
+        
+        // Handle Check Trade league with backward compatibility
+        const importedLeague = decoded.checkTradeLeague || 'Mercenaries'; // Default for old codes
+        setTradeFormData(prev => ({
+          ...prev,
+          league: importedLeague
+        }));
+        
         setImportStatus('success');
         setImportMessage('Selections imported successfully!');
       } else {
@@ -958,6 +1196,61 @@ Class == "Jewel"
     } catch (e) {
       setImportStatus('error');
       setImportMessage('Failed to decode TAWM CODE.');
+    }
+  };
+
+  // Scroll to bottom function
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+  };
+
+  // Paste from clipboard function
+  const pasteFromClipboard = async () => {
+    try {
+      const text = await navigator.clipboard.readText();
+      setImportText(text);
+    } catch (err) {
+      console.error('Failed to read from clipboard:', err);
+    }
+  };
+
+  // Get default item level based on equipment type and subcategory
+  const getDefaultItemLevel = (equipment: string, subcategory?: string): string => {
+    switch (equipment) {
+      case 'Body Armour':
+        return '86';
+      case 'Boots':
+        return '86';
+      case 'Gloves':
+        if (subcategory === 'Int') return '84';
+        if (subcategory === 'Dex' || subcategory === 'DexInt' || subcategory === 'StrDex') return '85';
+        if (subcategory === 'Str' || subcategory === 'StrInt') return '85';
+        return '85'; // default for gloves
+      case 'Helmets':
+        return '85';
+      case 'Jewellery':
+        if (subcategory === 'Rings') return '85';
+        if (subcategory === 'Amulets' || subcategory === 'Belts') return '86';
+        return '86'; // default for jewellery
+      case 'Quivers':
+        return '86';
+      case 'Shields':
+        return '86';
+      // Weapon equipment types
+      case 'OneHandAttack':
+        return '83'; // Attack Weapons (Non-Bows)
+      case 'TwoHandAttack':
+        if (subcategory === 'Bow') return '86'; // Bows
+        return '83'; // Other attack weapons (Two Hand Axe, Two Hand Mace, Two Hand Sword, Warstaff)
+      case 'OneHandCast':
+        return '84'; // Caster Weapons (Wands)
+      case 'TwoHandCast':
+        return '84'; // Caster Weapons (Staff)
+      default:
+        return '86'; // default fallback
     }
   };
 
@@ -996,6 +1289,7 @@ Class == "Jewel"
       URL.revokeObjectURL(url);
     }, 0);
   };
+
 
   // Helper function to get display name for equipment
   const getEquipmentDisplayName = (equipment: string): string => {
@@ -1132,12 +1426,18 @@ Class == "Jewel"
                   group: baseType,
                   base: gigaBase,
                   element: (
-                    <div key={grouping.id + '-' + gigaBase} className="preview-line" style={style}>
+                    <div 
+                      key={grouping.id + '-' + gigaBase} 
+                      className="preview-line" 
+                      style={{...style, cursor: 'pointer'}}
+                      onClick={() => handlePreviewItemClick(stat!, gigaBase, lastSelectedInfo.family)}
+                    >
                       <span className="preview-stat">{stat}</span>
                       <span className="preview-base"> {gigaBase}</span>
                     </div>
                   )
                 });
+              
               }
             });
           }
@@ -1153,7 +1453,12 @@ Class == "Jewel"
               group: baseType,
               base,
               element: (
-                <div key={grouping.id} className="preview-line" style={style}>
+                <div 
+                  key={grouping.id} 
+                  className="preview-line" 
+                  style={{...style, cursor: 'pointer'}}
+                  onClick={() => handlePreviewItemClick(stat!, base, lastSelectedInfo.family)}
+                >
                   <span className="preview-stat">{stat}</span>
                   <span className="preview-base"> {base}</span>
                 </div>
@@ -1173,7 +1478,12 @@ Class == "Jewel"
             group: baseType,
             base,
             element: (
-              <div key={grouping.id} className="preview-line" style={style}>
+              <div 
+                key={grouping.id} 
+                className="preview-line" 
+                style={{...style, cursor: 'pointer'}}
+                onClick={() => handlePreviewItemClick(stat!, base, lastSelectedInfo.family)}
+              >
                 <span className="preview-stat">{stat}</span>
                 <span className="preview-base"> {base}</span>
               </div>
@@ -1192,7 +1502,12 @@ Class == "Jewel"
             group: baseType,
             base,
             element: (
-              <div key={grouping.id} className="preview-line" style={style}>
+              <div 
+                key={grouping.id} 
+                className="preview-line" 
+                style={{...style, cursor: 'pointer'}}
+                onClick={() => handlePreviewItemClick(stat!, base, lastSelectedInfo.family)}
+              >
                 <span className="preview-stat">{stat}</span>
                 <span className="preview-base"> {base}</span>
               </div>
@@ -1211,7 +1526,12 @@ Class == "Jewel"
             group: baseType,
             base,
             element: (
-          <div key={grouping.id} className="preview-line" style={style}>
+          <div 
+            key={grouping.id} 
+            className="preview-line" 
+            style={{...style, cursor: 'pointer'}}
+            onClick={() => handlePreviewItemClick(stat!, base, lastSelectedInfo.family)}
+          >
             <span className="preview-stat">{stat}</span>
             <span className="preview-base"> {base}</span>
               </div>
@@ -1309,6 +1629,8 @@ Class == "Jewel"
     'AllGemChaos', 'AllGemChaos3', 'AllGemCold', 'AllGemCold3', 'AllGemFire', 'AllGemFire3', 
     'AllGemLightning', 'AllGemLightning3', 'AllGemMinion', 'AllGemPhysical', 'AllGemPhysical3',
     'AllMinionGemLevel',
+    // +# to Level of all Spell Skill Gems
+    'IncreaseSocketedGemLevel', 'IncreaseSocketedGemLevel2',
     // Pure Spell Damage
     'SpellDamage',
   ];
@@ -1602,6 +1924,7 @@ Class == "Jewel"
     setAutoSelectConfirmation({ type: null, blinkingButton: null });
   }, []);
 
+
   if (loading) return <div className="app-loading">Loading...</div>;
   if (error) return <div className="app-error">Error: {error}</div>;
 
@@ -1623,125 +1946,33 @@ Class == "Jewel"
       }}>
         {/* Equipment Selection */}
         <section className="app-selectors">
-          {/* Auto-select buttons moved here */}
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8, marginTop: 20, gap: '0.5rem', flexWrap: 'wrap' }}>
+          {/* Autoselect and Clear buttons */}
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8, marginTop: 50, gap: '0.5rem', flexWrap: 'wrap' }}>
             <button 
-              className={`generate-button ${autoSelectConfirmation.blinkingButton === 'all' ? 'blinking' : ''}`}
-              onClick={handleAutoSelectAllClick}
+              onClick={() => setAutoselectExpanded(!autoselectExpanded)}
               style={{
                 padding: '0.4em 1.1em',
                 fontSize: '1.2rem',
                 fontWeight: '500',
-                backgroundColor: autoSelectConfirmation.blinkingButton === 'all' ? 'var(--selected)' : 'var(--surface)',
-                color: autoSelectConfirmation.blinkingButton === 'all' ? 'var(--selected-text)' : 'var(--text)',
+                backgroundColor: 'var(--surface)',
+                color: 'var(--text)',
                 border: '2px solid var(--border)',
                 borderRadius: '4px',
                 cursor: 'pointer',
-                flex: '1',
                 maxWidth: '200px',
                 transition: 'background 0.15s, border 0.15s, color 0.15s',
                 boxShadow: '0 1px 4px rgba(0,0,0,0.12)'
               }}
               onMouseEnter={(e) => {
-                if (autoSelectConfirmation.blinkingButton === 'all') {
-                  e.currentTarget.style.backgroundColor = 'var(--accent)';
-                  e.currentTarget.style.borderColor = 'var(--accent)';
-                } else {
-                  e.currentTarget.style.backgroundColor = 'var(--button-hover)';
-                  e.currentTarget.style.borderColor = 'var(--accent)';
-                }
+                e.currentTarget.style.backgroundColor = 'var(--button-hover)';
+                e.currentTarget.style.borderColor = 'var(--accent)';
               }}
               onMouseLeave={(e) => {
-                if (autoSelectConfirmation.blinkingButton === 'all') {
-                  e.currentTarget.style.backgroundColor = 'var(--selected)';
-                  e.currentTarget.style.borderColor = 'var(--selected)';
-                } else {
-                  e.currentTarget.style.backgroundColor = 'var(--surface)';
-                  e.currentTarget.style.borderColor = 'var(--border)';
-                }
+                e.currentTarget.style.backgroundColor = 'var(--surface)';
+                e.currentTarget.style.borderColor = 'var(--border)';
               }}
             >
-              Autoselect ALL
-            </button>
-            <button 
-              className={`generate-button ${autoSelectConfirmation.blinkingButton === 'equipment' ? 'blinking' : ''}`}
-              onClick={handleAutoSelectEquipmentClick}
-              disabled={!selectedEquipment}
-              style={{ 
-                padding: '0.4em 1.1em',
-                fontSize: '1.2rem',
-                fontWeight: '500',
-                backgroundColor: autoSelectConfirmation.blinkingButton === 'equipment' ? 'var(--selected)' : 'var(--surface)',
-                color: autoSelectConfirmation.blinkingButton === 'equipment' ? 'var(--selected-text)' : 'var(--text)',
-                border: '2px solid var(--border)',
-                borderRadius: '4px',
-                cursor: selectedEquipment ? 'pointer' : 'not-allowed',
-                flex: '1',
-                maxWidth: '200px',
-                transition: 'background 0.15s, border 0.15s, color 0.15s',
-                boxShadow: '0 1px 4px rgba(0,0,0,0.12)',
-                opacity: selectedEquipment ? 1 : 0.5
-              }}
-              onMouseEnter={(e) => {
-                if (autoSelectConfirmation.blinkingButton === 'equipment') {
-                  e.currentTarget.style.backgroundColor = 'var(--accent)';
-                  e.currentTarget.style.borderColor = 'var(--accent)';
-                } else if (selectedEquipment) {
-                  e.currentTarget.style.backgroundColor = 'var(--button-hover)';
-                  e.currentTarget.style.borderColor = 'var(--accent)';
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (autoSelectConfirmation.blinkingButton === 'equipment') {
-                  e.currentTarget.style.backgroundColor = 'var(--selected)';
-                  e.currentTarget.style.borderColor = 'var(--selected)';
-                } else {
-                  e.currentTarget.style.backgroundColor = 'var(--surface)';
-                  e.currentTarget.style.borderColor = 'var(--border)';
-                }
-              }}
-            >
-              Autoselect Equipment
-            </button>
-            <button 
-              className={`generate-button ${autoSelectConfirmation.blinkingButton === 'subcategory' ? 'blinking' : ''}`}
-              onClick={handleAutoSelectSubcategoryClick}
-              disabled={!selectedSubcategory}
-              style={{ 
-                padding: '0.4em 1.1em',
-                fontSize: '1.2rem',
-                fontWeight: '500',
-                backgroundColor: autoSelectConfirmation.blinkingButton === 'subcategory' ? 'var(--selected)' : 'var(--surface)',
-                color: autoSelectConfirmation.blinkingButton === 'subcategory' ? 'var(--selected-text)' : 'var(--text)',
-                border: '2px solid var(--border)',
-                borderRadius: '4px',
-                cursor: selectedSubcategory ? 'pointer' : 'not-allowed',
-                flex: '1',
-                maxWidth: '200px',
-                transition: 'background 0.15s, border 0.15s, color 0.15s',
-                boxShadow: '0 1px 4px rgba(0,0,0,0.12)',
-                opacity: selectedSubcategory ? 1 : 0.5
-              }}
-              onMouseEnter={(e) => {
-                if (autoSelectConfirmation.blinkingButton === 'subcategory') {
-                  e.currentTarget.style.backgroundColor = 'var(--accent)';
-                  e.currentTarget.style.borderColor = 'var(--accent)';
-                } else if (selectedSubcategory) {
-                  e.currentTarget.style.backgroundColor = 'var(--button-hover)';
-                  e.currentTarget.style.borderColor = 'var(--accent)';
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (autoSelectConfirmation.blinkingButton === 'subcategory') {
-                  e.currentTarget.style.backgroundColor = 'var(--selected)';
-                  e.currentTarget.style.borderColor = 'var(--selected)';
-                } else {
-                  e.currentTarget.style.backgroundColor = 'var(--surface)';
-                  e.currentTarget.style.borderColor = 'var(--border)';
-                }
-              }}
-            >
-              Autoselect Subcat
+              Autoselect {autoselectExpanded ? '▲' : '▼'}
             </button>
             <button 
               className={`generate-button ${autoSelectConfirmation.blinkingButton === 'clear' ? 'blinking' : ''}`}
@@ -1755,7 +1986,6 @@ Class == "Jewel"
                 border: '2px solid var(--border)',
                 borderRadius: '4px',
                 cursor: 'pointer',
-                flex: '1',
                 maxWidth: '200px',
                 transition: 'background 0.15s, border 0.15s, color 0.15s',
                 boxShadow: '0 1px 4px rgba(0,0,0,0.12)'
@@ -1782,6 +2012,129 @@ Class == "Jewel"
               Clear ALL
             </button>
           </div>
+          {/* Collapsible Autoselect buttons */}
+          {autoselectExpanded && (
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8, gap: '0.5rem', flexWrap: 'wrap' }}>
+              <button 
+                className={`generate-button ${autoSelectConfirmation.blinkingButton === 'all' ? 'blinking' : ''}`}
+                onClick={handleAutoSelectAllClick}
+                style={{
+                  padding: '0.4em 1.1em',
+                  fontSize: '1.2rem',
+                  fontWeight: '500',
+                  backgroundColor: autoSelectConfirmation.blinkingButton === 'all' ? 'var(--selected)' : 'var(--surface)',
+                  color: autoSelectConfirmation.blinkingButton === 'all' ? 'var(--selected-text)' : 'var(--text)',
+                  border: '2px solid var(--border)',
+                  borderRadius: '4px',
+                  cursor: 'pointer',
+                  flex: '1',
+                  maxWidth: '200px',
+                  transition: 'background 0.15s, border 0.15s, color 0.15s',
+                  boxShadow: '0 1px 4px rgba(0,0,0,0.12)'
+                }}
+                onMouseEnter={(e) => {
+                  if (autoSelectConfirmation.blinkingButton === 'all') {
+                    e.currentTarget.style.backgroundColor = 'var(--accent)';
+                    e.currentTarget.style.borderColor = 'var(--accent)';
+                  } else {
+                    e.currentTarget.style.backgroundColor = 'var(--button-hover)';
+                    e.currentTarget.style.borderColor = 'var(--accent)';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (autoSelectConfirmation.blinkingButton === 'all') {
+                    e.currentTarget.style.backgroundColor = 'var(--selected)';
+                    e.currentTarget.style.borderColor = 'var(--selected)';
+                  } else {
+                    e.currentTarget.style.backgroundColor = 'var(--surface)';
+                    e.currentTarget.style.borderColor = 'var(--border)';
+                  }
+                }}
+              >
+                Autoselect ALL
+              </button>
+              <button 
+                className={`generate-button ${autoSelectConfirmation.blinkingButton === 'equipment' ? 'blinking' : ''}`}
+                onClick={handleAutoSelectEquipmentClick}
+                disabled={!selectedEquipment}
+                style={{ 
+                  padding: '0.4em 1.1em',
+                  fontSize: '1.2rem',
+                  fontWeight: '500',
+                  backgroundColor: autoSelectConfirmation.blinkingButton === 'equipment' ? 'var(--selected)' : 'var(--surface)',
+                  color: autoSelectConfirmation.blinkingButton === 'equipment' ? 'var(--selected-text)' : 'var(--text)',
+                  border: '2px solid var(--border)',
+                  borderRadius: '4px',
+                  cursor: selectedEquipment ? 'pointer' : 'not-allowed',
+                  flex: '1',
+                  maxWidth: '200px',
+                  transition: 'background 0.15s, border 0.15s, color 0.15s',
+                  boxShadow: '0 1px 4px rgba(0,0,0,0.12)',
+                  opacity: selectedEquipment ? 1 : 0.5
+                }}
+                onMouseEnter={(e) => {
+                  if (autoSelectConfirmation.blinkingButton === 'equipment') {
+                    e.currentTarget.style.backgroundColor = 'var(--accent)';
+                    e.currentTarget.style.borderColor = 'var(--accent)';
+                  } else if (selectedEquipment) {
+                    e.currentTarget.style.backgroundColor = 'var(--button-hover)';
+                    e.currentTarget.style.borderColor = 'var(--accent)';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (autoSelectConfirmation.blinkingButton === 'equipment') {
+                    e.currentTarget.style.backgroundColor = 'var(--selected)';
+                    e.currentTarget.style.borderColor = 'var(--selected)';
+                  } else {
+                    e.currentTarget.style.backgroundColor = 'var(--surface)';
+                    e.currentTarget.style.borderColor = 'var(--border)';
+                  }
+                }}
+              >
+                Autoselect Equipment
+              </button>
+              <button 
+                className={`generate-button ${autoSelectConfirmation.blinkingButton === 'subcategory' ? 'blinking' : ''}`}
+                onClick={handleAutoSelectSubcategoryClick}
+                disabled={!selectedSubcategory}
+                style={{ 
+                  padding: '0.4em 1.1em',
+                  fontSize: '1.2rem',
+                  fontWeight: '500',
+                  backgroundColor: autoSelectConfirmation.blinkingButton === 'subcategory' ? 'var(--selected)' : 'var(--surface)',
+                  color: autoSelectConfirmation.blinkingButton === 'subcategory' ? 'var(--selected-text)' : 'var(--text)',
+                  border: '2px solid var(--border)',
+                  borderRadius: '4px',
+                  cursor: selectedSubcategory ? 'pointer' : 'not-allowed',
+                  flex: '1',
+                  maxWidth: '200px',
+                  transition: 'background 0.15s, border 0.15s, color 0.15s',
+                  boxShadow: '0 1px 4px rgba(0,0,0,0.12)',
+                  opacity: selectedSubcategory ? 1 : 0.5
+                }}
+                onMouseEnter={(e) => {
+                  if (autoSelectConfirmation.blinkingButton === 'subcategory') {
+                    e.currentTarget.style.backgroundColor = 'var(--accent)';
+                    e.currentTarget.style.borderColor = 'var(--accent)';
+                  } else if (selectedSubcategory) {
+                    e.currentTarget.style.backgroundColor = 'var(--button-hover)';
+                    e.currentTarget.style.borderColor = 'var(--accent)';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (autoSelectConfirmation.blinkingButton === 'subcategory') {
+                    e.currentTarget.style.backgroundColor = 'var(--selected)';
+                    e.currentTarget.style.borderColor = 'var(--selected)';
+                  } else {
+                    e.currentTarget.style.backgroundColor = 'var(--surface)';
+                    e.currentTarget.style.borderColor = 'var(--border)';
+                  }
+                }}
+              >
+                Autoselect Subcat
+              </button>
+            </div>
+          )}
           {/* Confirmation area */}
           <div style={{ 
             display: 'flex', 
@@ -1822,7 +2175,7 @@ Class == "Jewel"
           <h3 style={{ marginTop: 8 }}>Equipment</h3>
           <div className="equipment-selector" style={{ 
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+            gridTemplateColumns: 'repeat(7, 1fr)',
             gap: '8px',
             maxWidth: '100%'
           }}>
@@ -1835,22 +2188,40 @@ Class == "Jewel"
                   setSelectedSubcategory(null);
                 }}
                 style={{
-                  order: (() => {
+                  gridColumn: (() => {
                     switch (eq) {
-                      case 'Body Armour': return 0;
-                      case 'Boots': return 1;
-                      case 'Gloves': return 2;
-                      case 'Helmets': return 3;
-                      case 'Shield': return 4;
-                      case 'OneHandCast': return 5;
-                      case 'TwoHandCast': return 6;
-                      case 'OneHandAttack': return 7;
-                      case 'TwoHandAttack': return 8;
-                      case 'Jewellery': return 9;
-                      case 'Quiver': return 10;
-                      default: return 999;
+                      case 'Body Armour': return 1;
+                      case 'Boots': return 2;
+                      case 'Gloves': return 3;
+                      case 'Helmets': return 4;
+                      case 'Shield': return 5;
+                      case 'Jewellery': return 6;
+                      case 'Quiver': return 7;
+                      case 'OneHandCast': return 1;
+                      case 'TwoHandCast': return 2;
+                      case 'OneHandAttack': return 3;
+                      case 'TwoHandAttack': return 4;
+                      default: return 'auto';
                     }
-                  })()
+                  })(),
+                  gridRow: (() => {
+                    switch (eq) {
+                      case 'Body Armour':
+                      case 'Boots':
+                      case 'Gloves':
+                      case 'Helmets':
+                      case 'Shield':
+                      case 'Jewellery':
+                      case 'Quiver': return 1;
+                      case 'OneHandCast':
+                      case 'TwoHandCast':
+                      case 'OneHandAttack':
+                      case 'TwoHandAttack': return 2;
+                      default: return 'auto';
+                    }
+                  })(),
+                  minHeight: '70px',
+                  height: '70px'
                 }}
               >
                 {getEquipmentDisplayName(eq)}
@@ -1975,8 +2346,9 @@ Class == "Jewel"
                     return (
                       <div key={familyName} className="family-card">
                         <div className="family-header">
-                          <h5>{family.displayName}</h5>
-                          <div className="mod-buttons-grid">
+                          <h5 style={{ whiteSpace: 'pre-line' }}>{family.displayName}</h5>
+                        </div>
+                        <div className="mod-buttons-grid">
                             <button 
                               className={`mod-button ${modButtonSelection === null ? 'selected' : ''}`}
                               onClick={() => handleModButtonSelect(familyName, 'off')}
@@ -2001,7 +2373,6 @@ Class == "Jewel"
                             >
                               {modButtonSelection === 'giga' ? 'GIGA MOD' : 'GIGA MOD?'}
                             </button>
-                          </div>
                         </div>
                         
                         {/* Single Tier Section - adapts based on mod selection */}
@@ -2066,8 +2437,9 @@ Class == "Jewel"
                     return (
                       <div key={familyName} className="family-card">
                         <div className="family-header">
-                          <h5>{family.displayName}</h5>
-                          <div className="mod-buttons-grid">
+                          <h5 style={{ whiteSpace: 'pre-line' }}>{family.displayName}</h5>
+                        </div>
+                        <div className="mod-buttons-grid">
                             <button 
                               className={`mod-button ${modButtonSelection === null ? 'selected' : ''}`}
                               onClick={() => handleModButtonSelect(familyName, 'off')}
@@ -2092,7 +2464,6 @@ Class == "Jewel"
                             >
                               {modButtonSelection === 'giga' ? 'GIGA MOD' : 'GIGA MOD?'}
                             </button>
-                          </div>
                         </div>
                         
                         {/* Single Tier Section - adapts based on mod selection */}
@@ -2139,7 +2510,7 @@ Class == "Jewel"
             )}
 
             {/* Info Panel Column */}
-            <div className="info-col" style={{ flex: '0 0 300px', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+            <div className="info-col" style={{ flex: '0 0 300px', display: 'flex', flexDirection: 'column', minHeight: 0, marginTop: '2.87rem' }}>
               <h4>Preview</h4>
               <div className="info-content" style={{ flex: 1, overflowY: 'auto', minHeight: 0 }}>
                 {/* New Groupings Preview */}
@@ -2168,6 +2539,252 @@ Class == "Jewel"
                   <div className="info-item">No selection yet.</div>
                 )}
               </div>
+              {/* Scroll to Bottom button */}
+              <button 
+                onClick={scrollToBottom}
+                style={{
+                  marginTop: '0.5rem',
+                  padding: '0.5rem',
+                  backgroundColor: 'var(--surface)',
+                  color: 'var(--text)',
+                  border: '1px solid var(--border)',
+                  borderRadius: '0.25rem',
+                  cursor: 'pointer',
+                  fontSize: '0.8rem',
+                  fontWeight: '500'
+                }}
+              >
+                Scroll to Bottom
+              </button>
+            </div>
+
+            {/* Check Trade Panel Column */}
+            <div className="info-col" style={{ flex: '0 0 300px', display: 'flex', flexDirection: 'column', minHeight: 0, marginTop: '2.87rem' }}>
+              <h4>Check Trade</h4>
+              <div className="info-content" style={{ flex: 1, overflowY: 'auto', minHeight: 0 }}>
+                {/* Trade Search Form */}
+                <div className="trade-form" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                  
+                  {/* Item Field - Full width (long base type names) */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                    <label style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)' }}>Item</label>
+                    <input 
+                      type="text" 
+                      placeholder="e.g., Convoking Wand"
+                      value={tradeFormData.item}
+                      readOnly
+                      style={{ 
+                        padding: '0.4rem', 
+                        borderRadius: '0.25rem', 
+                        border: '1px solid var(--border)',
+                        backgroundColor: 'var(--surface)',
+                        color: 'var(--text-muted, #9ca3af)',
+                        fontSize: '0.85rem',
+                        fontFamily: "'Alegreya Sans SC', Arial, sans-serif",
+                        fontVariant: 'small-caps',
+                        cursor: 'not-allowed'
+                      }}
+                    />
+                  </div>
+
+                  {/* Mod Field - Full width (very long modifier text) */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                    <label style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)' }}>Mod</label>
+                    <input 
+                      type="text" 
+                      placeholder="e.g., +# to maximum Mana"
+                      value={tradeFormData.mod}
+                      readOnly
+                      style={{ 
+                        padding: '0.4rem', 
+                        borderRadius: '0.25rem', 
+                        border: '1px solid var(--border)',
+                        backgroundColor: 'var(--surface)',
+                        color: 'var(--text-muted, #9ca3af)',
+                        fontSize: '0.85rem',
+                        fontFamily: "'Alegreya Sans SC', Arial, sans-serif",
+                        fontVariant: 'small-caps',
+                        cursor: 'not-allowed'
+                      }}
+                    />
+                  </div>
+
+                  {/* Min/Max Row - Inline labels with fields (directly under Mod) */}
+                  <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'end' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                      <label style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)' }}>Min</label>
+                      <input 
+                        type="number" 
+                        placeholder="1"
+                        value={tradeFormData.min}
+                        onChange={(e) => setTradeFormData({...tradeFormData, min: e.target.value})}
+                        style={{ 
+                          width: '60px',
+                          padding: '0.4rem', 
+                          borderRadius: '0.25rem', 
+                          border: '1px solid var(--border)',
+                          backgroundColor: 'var(--surface)',
+                          color: 'var(--text)',
+                          fontSize: '0.85rem',
+                          fontFamily: "'Alegreya Sans SC', Arial, sans-serif",
+                          fontVariant: 'small-caps'
+                        }}
+                      />
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                      <label style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)' }}>Max</label>
+                      <input 
+                        type="number" 
+                        placeholder=""
+                        value={tradeFormData.max}
+                        onChange={(e) => setTradeFormData({...tradeFormData, max: e.target.value})}
+                        style={{ 
+                          width: '60px',
+                          padding: '0.4rem', 
+                          borderRadius: '0.25rem', 
+                          border: '1px solid var(--border)',
+                          backgroundColor: 'var(--surface)',
+                          color: 'var(--text)',
+                          fontSize: '0.85rem',
+                          fontFamily: "'Alegreya Sans SC', Arial, sans-serif",
+                          fontVariant: 'small-caps'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Second Mod Field + Min/Max Row - Only visible for hybrid modifiers */}
+                  {tradeFormData.isHybrid && (
+                    <>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+                        <label style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)' }}>Mod 2</label>
+                        <input 
+                          type="text" 
+                          placeholder="e.g., +# to maximum Life"
+                          value={tradeFormData.mod2}
+                          readOnly
+                          style={{ 
+                            padding: '0.4rem', 
+                            borderRadius: '0.25rem', 
+                            border: '1px solid var(--border)',
+                            backgroundColor: 'var(--surface)',
+                            color: 'var(--text-muted, #9ca3af)',
+                            fontSize: '0.85rem',
+                            fontFamily: "'Alegreya Sans SC', Arial, sans-serif",
+                            fontVariant: 'small-caps',
+                            cursor: 'not-allowed'
+                          }}
+                        />
+                      </div>
+
+                      <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'end' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                          <label style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)' }}>Min 2</label>
+                          <input 
+                            type="number" 
+                            placeholder="1"
+                            value={tradeFormData.min2}
+                            onChange={(e) => setTradeFormData({...tradeFormData, min2: e.target.value})}
+                            style={{ 
+                              width: '60px',
+                              padding: '0.4rem', 
+                              borderRadius: '0.25rem', 
+                              border: '1px solid var(--border)',
+                              backgroundColor: 'var(--surface)',
+                              color: 'var(--text)',
+                              fontSize: '0.85rem',
+                              fontFamily: "'Alegreya Sans SC', Arial, sans-serif",
+                              fontVariant: 'small-caps'
+                            }}
+                          />
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                          <label style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)' }}>Max 2</label>
+                          <input 
+                            type="number" 
+                            placeholder=""
+                            value={tradeFormData.max2}
+                            onChange={(e) => setTradeFormData({...tradeFormData, max2: e.target.value})}
+                            style={{ 
+                              width: '60px',
+                              padding: '0.4rem', 
+                              borderRadius: '0.25rem', 
+                              border: '1px solid var(--border)',
+                              backgroundColor: 'var(--surface)',
+                              color: 'var(--text)',
+                              fontSize: '0.85rem',
+                              fontFamily: "'Alegreya Sans SC', Arial, sans-serif",
+                              fontVariant: 'small-caps'
+                            }}
+                          />
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {/* Item Level/League Row - Side by side (short text) */}
+                  <div style={{ display: 'flex', gap: '0.5rem' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', width: '70px' }}>
+                      <label style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)' }}>Item Level</label>
+                      <input 
+                        type="number" 
+                        value={tradeFormData.itemLevel}
+                        onChange={(e) => setTradeFormData({...tradeFormData, itemLevel: e.target.value})}
+                        style={{ 
+                          padding: '0.4rem', 
+                          borderRadius: '0.25rem', 
+                          border: '1px solid var(--border)',
+                          backgroundColor: 'var(--surface)',
+                          color: 'var(--text)',
+                          fontSize: '0.85rem',
+                          fontFamily: "'Alegreya Sans SC', Arial, sans-serif",
+                          fontVariant: 'small-caps'
+                        }}
+                      />
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', flex: 1 }}>
+                      <label style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text)' }}>League</label>
+                      <input 
+                        type="text" 
+                        value={tradeFormData.league}
+                        onChange={(e) => setTradeFormData({...tradeFormData, league: e.target.value})}
+                        style={{ 
+                          padding: '0.4rem', 
+                          borderRadius: '0.25rem', 
+                          border: '1px solid var(--border)',
+                          backgroundColor: 'var(--surface)',
+                          color: 'var(--text)',
+                          fontSize: '0.85rem',
+                          fontFamily: "'Alegreya Sans SC', Arial, sans-serif",
+                          fontVariant: 'small-caps'
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Search Button */}
+                  <button 
+                    onClick={handleOpenPoETrade}
+                    style={{ 
+                      marginTop: '0.5rem',
+                      padding: '0.6rem 1rem', 
+                      borderRadius: '0.375rem', 
+                      border: 'none',
+                      backgroundColor: '#4f46e5',
+                      color: 'white',
+                      fontSize: '0.9rem',
+                      fontWeight: 600,
+                      cursor: 'pointer',
+                      transition: 'background-color 0.2s'
+                    }}
+                    onMouseOver={(e) => (e.target as HTMLElement).style.backgroundColor = '#4338ca'}
+                    onMouseOut={(e) => (e.target as HTMLElement).style.backgroundColor = '#4f46e5'}
+                  >
+                    Open PoE Trade
+                  </button>
+                  
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -2183,9 +2800,9 @@ Class == "Jewel"
               padding: '12px 24px',
               fontSize: '16px',
               fontWeight: 'bold',
-              backgroundColor: hasGenerated ? '#4CAF50' : '#ccc',
+              backgroundColor: hasGenerated ? '#124213ff' : '#ccc',
               color: hasGenerated ? 'white' : '#666',
-              border: '2px solid #45a049',
+              border: '2px solid #124213ff',
               borderRadius: '8px',
               cursor: hasGenerated ? 'pointer' : 'not-allowed',
               flex: '1',
@@ -2201,9 +2818,9 @@ Class == "Jewel"
               padding: '12px 24px',
               fontSize: '16px',
               fontWeight: 'bold',
-              backgroundColor: '#FFD700',
+              backgroundColor: '#E7B86F',
               color: '#000',
-              border: '2px solid #DAA520',
+              border: '2px solid #E7B86F',
               borderRadius: '8px',
               cursor: 'pointer',
               flex: '1',
@@ -2220,9 +2837,9 @@ Class == "Jewel"
               padding: '12px 24px',
               fontSize: '16px',
               fontWeight: 'bold',
-              backgroundColor: hasGenerated ? '#2196F3' : '#ccc',
+              backgroundColor: hasGenerated ? '#0a3152ff' : '#ccc',
               color: hasGenerated ? 'white' : '#666',
-              border: '2px solid #1976D2',
+              border: '2px solid #0a3152ff',
               borderRadius: '6px',
               cursor: hasGenerated ? 'pointer' : 'not-allowed',
               flex: '1',
@@ -2258,22 +2875,24 @@ Class == "Jewel"
               whiteSpace: 'pre-wrap'
             }}
           />
-          <button 
-            onClick={handleImport} 
-            style={{ 
-              width: '100%', 
-              padding: '12px', 
-              fontSize: '16px',
-              backgroundColor: '#2196F3',
-              color: 'white',
-              border: '2px solid #1976D2',
-              borderRadius: '6px',
-              cursor: 'pointer',
-              marginBottom: '0.5rem'
-            }}
-          >
-            Import
-          </button>
+          <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem' }}>
+            
+            <button 
+              onClick={handleImport} 
+              style={{ 
+                flex: '1',
+                padding: '12px', 
+                fontSize: '16px',
+                backgroundColor: '#0a3152ff',
+                color: 'white',
+                border: '2px solid #0a3152ff',
+                borderRadius: '6px',
+                cursor: 'pointer'
+              }}
+            >
+              Import
+            </button>
+          </div>
           {importStatus === 'success' && (
             <div style={{ color: 'green', textAlign: 'center' }}>{importMessage}</div>
           )}

@@ -7,7 +7,9 @@
         "stat": "Bow Attacks fire an additional Arrow"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "Bow Attacks fire # additional Arrows",
+    "fracturedStatId": "fractured.stat_3885405204"
   },
   "AdditionalArrows2": {
     "mods": [
@@ -17,7 +19,9 @@
         "stat": "Bow Attacks fire 2 additional Arrows"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "Bow Attacks fire # additional Arrows",
+    "fracturedStatId": "fractured.stat_3885405204"
   },
   "AdditionalArrowsBowAttacks2": {
     "mods": [
@@ -27,7 +31,9 @@
         "stat": "Bow Attacks fire an additional Arrow"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "Bow Attacks fire # additional Arrows",
+    "fracturedStatId": "fractured.stat_3885405204"
   },
   "AllAttributes": {
     "mods": [
@@ -52,7 +58,9 @@
         "stat": "+(1-4) to all Attributes"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+# to all Attributes",
+    "fracturedStatId": "fractured.stat_1379411836"
   },
   "AllAttributes2": {
     "mods": [
@@ -82,7 +90,9 @@
         "stat": "+(17-20) to all Attributes"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+# to all Attributes",
+    "fracturedStatId": "fractured.stat_1379411836"
   },
   "AllGemChaos": {
     "mods": [
@@ -92,7 +102,9 @@
         "stat": "+1 to Level of all Chaos Spell Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Chaos Spell Skill Gems",
+    "fracturedStatId": "fractured.stat_4226189338"
   },
   "AllGemChaos3": {
     "mods": [
@@ -102,7 +114,9 @@
         "stat": "+3 to Level of all Chaos Spell Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Chaos Spell Skill Gems",
+    "fracturedStatId": "fractured.stat_4226189338"
   },
   "AllGemCold": {
     "mods": [
@@ -112,7 +126,9 @@
         "stat": "+1 to Level of all Cold Spell Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Cold Spell Skill Gems",
+    "fracturedStatId": "fractured.stat_2254480358"
   },
   "AllGemCold3": {
     "mods": [
@@ -122,7 +138,9 @@
         "stat": "+3 to Level of all Cold Spell Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Cold Spell Skill Gems",
+    "fracturedStatId": "fractured.stat_2254480358"
   },
   "AllGemFire": {
     "mods": [
@@ -132,7 +150,9 @@
         "stat": "+1 to Level of all Fire Spell Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Fire Spell Skill Gems",
+    "fracturedStatId": "fractured.stat_591105508"
   },
   "AllGemFire3": {
     "mods": [
@@ -142,7 +162,9 @@
         "stat": "+3 to Level of all Fire Spell Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Fire Spell Skill Gems",
+    "fracturedStatId": "fractured.stat_591105508"
   },
   "AllGemLightning": {
     "mods": [
@@ -152,7 +174,9 @@
         "stat": "+1 to Level of all Lightning Spell Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Lightning Spell Skill Gems",
+    "fracturedStatId": "fractured.stat_1545858329"
   },
   "AllGemLightning3": {
     "mods": [
@@ -162,7 +186,9 @@
         "stat": "+3 to Level of all Lightning Spell Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Lightning Spell Skill Gems",
+    "fracturedStatId": "fractured.stat_1545858329"
   },
   "AllGemMinion": {
     "mods": [
@@ -172,7 +198,9 @@
         "stat": "+1 to Level of all Minion Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Minion Skill Gems",
+    "fracturedStatId": "fractured.stat_2162097452"
   },
   "AllGemPhysical": {
     "mods": [
@@ -182,7 +210,9 @@
         "stat": "+1 to Level of all Physical Spell Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Physical Spell Skill Gems",
+    "fracturedStatId": "fractured.stat_1600707273"
   },
   "AllGemPhysical3": {
     "mods": [
@@ -192,7 +222,9 @@
         "stat": "+3 to Level of all Physical Spell Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Physical Spell Skill Gems",
+    "fracturedStatId": "fractured.stat_1600707273"
   },
   "AllMinionGemLevel": {
     "mods": [
@@ -207,7 +239,9 @@
         "stat": "+1 to Level of all Minion Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Minion Skill Gems",
+    "fracturedStatId": "fractured.stat_2162097452"
   },
   "AllResistances": {
     "mods": [
@@ -237,7 +271,9 @@
         "stat": "+(3-5)% to all Elemental Resistances"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to all Elemental Resistances",
+    "fracturedStatId": "fractured.stat_2901986750"
   },
   "AllResistances2": {
     "mods": [
@@ -267,7 +303,9 @@
         "stat": "+(6-8)% to all Elemental Resistances"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to all Elemental Resistances",
+    "fracturedStatId": "fractured.stat_2901986750"
   },
   "ArmourEnergyShieldPercent": {
     "mods": [
@@ -297,7 +335,9 @@
         "stat": "(43-55)% increased Armour and Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Armour and Energy Shield (Local)",
+    "fracturedStatId": "fractured.stat_3321629045"
   },
   "ArmourEnergyShieldPercent2": {
     "mods": [
@@ -327,7 +367,18 @@
         "stat": "(14-20)% increased Armour and Energy Shield(8-9)% increased Stun and Block Recovery"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Armour and Energy Shield (Local)\n#% increased Stun and Block Recovery",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_3321629045",
+        "text": "#% increased Armour and Energy Shield (Local)"
+      },
+      {
+        "id": "fractured.stat_2511217560",
+        "text": "#% increased Stun and Block Recovery"
+      }
+    ]
   },
   "ArmourEnergyShieldPercent22": {
     "mods": [
@@ -357,7 +408,9 @@
         "stat": "(56-67)% increased Armour and Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Armour and Energy Shield (Local)",
+    "fracturedStatId": "fractured.stat_3321629045"
   },
   "ArmourEvasionPercent": {
     "mods": [
@@ -387,7 +440,9 @@
         "stat": "(43-55)% increased Armour and Evasion"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Armour and Evasion (Local)",
+    "fracturedStatId": "fractured.stat_2451402625"
   },
   "ArmourEvasionPercent2": {
     "mods": [
@@ -417,7 +472,18 @@
         "stat": "(14-20)% increased Armour and Evasion(8-9)% increased Stun and Block Recovery"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Armour and Evasion (Local)\n#% increased Stun and Block Recovery",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_2451402625",
+        "text": "#% increased Armour and Evasion (Local)"
+      },
+      {
+        "id": "fractured.stat_2511217560",
+        "text": "#% increased Stun and Block Recovery"
+      }
+    ]
   },
   "ArmourEvasionPercent22": {
     "mods": [
@@ -447,7 +513,9 @@
         "stat": "(56-67)% increased Armour and Evasion"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Armour and Evasion (Local)",
+    "fracturedStatId": "fractured.stat_2451402625"
   },
   "ArmourPercent": {
     "mods": [
@@ -477,7 +545,9 @@
         "stat": "(43-55)% increased Armour"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Armour (Local)",
+    "fracturedStatId": "fractured.stat_1062208444"
   },
   "ArmourPercent2": {
     "mods": [
@@ -507,7 +577,9 @@
         "stat": "(56-67)% increased Armour"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Armour (Local)",
+    "fracturedStatId": "fractured.stat_1062208444"
   },
   "ArmourPercentIncreasedArmour": {
     "mods": [
@@ -537,7 +609,18 @@
         "stat": "(14-20)% increased Armour(8-9)% increased Stun and Block Recovery"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Armour (Local)\n#% increased Stun and Block Recovery",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_1062208444",
+        "text": "#% increased Armour (Local)"
+      },
+      {
+        "id": "fractured.stat_2511217560",
+        "text": "#% increased Stun and Block Recovery"
+      }
+    ]
   },
   "AttackerTakesDamageNoRange": {
     "mods": [
@@ -552,7 +635,9 @@
         "stat": "Reflects (1-4) Physical Damage to Melee Attackers"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Reflects # Physical Damage to Melee Attackers",
+    "fracturedStatId": "fractured.stat_3767873853"
   },
   "AttackerTakesDamageNoRange2": {
     "mods": [
@@ -577,7 +662,9 @@
         "stat": "Reflects (1-4) Physical Damage to Melee Attackers"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Reflects # Physical Damage to Melee Attackers",
+    "fracturedStatId": "fractured.stat_3767873853"
   },
   "AvoidElementalStatusAilments": {
     "mods": [
@@ -602,7 +689,9 @@
         "stat": "(16-20)% chance to Avoid Elemental Ailments"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% chance to Avoid Elemental Ailments",
+    "fracturedStatId": "fractured.stat_3005472710"
   },
   "BaseArmour": {
     "mods": [
@@ -632,7 +721,9 @@
         "stat": "+(36-63) to Armour"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Armour (Local)",
+    "fracturedStatId": "fractured.stat_3484657501"
   },
   "BaseArmour2": {
     "mods": [
@@ -662,7 +753,9 @@
         "stat": "+(64-82) to Armour"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Armour (Local)",
+    "fracturedStatId": "fractured.stat_3484657501"
   },
   "BaseArmour3": {
     "mods": [
@@ -697,7 +790,9 @@
         "stat": "+(102-120) to Armour"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Armour (Local)",
+    "fracturedStatId": "fractured.stat_3484657501"
   },
   "BaseArmourAndLife": {
     "mods": [
@@ -712,7 +807,18 @@
         "stat": "+(20-32) to Armour+(18-23) to maximum Life"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Armour (Local)\n+# to maximum Life",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_3484657501",
+        "text": "+# to Armour (Local)"
+      },
+      {
+        "id": "fractured.stat_3299347043",
+        "text": "+# to maximum Life"
+      }
+    ]
   },
   "BaseArmourAndLife2": {
     "mods": [
@@ -732,7 +838,18 @@
         "stat": "+(20-32) to Armour+(18-23) to maximum Life"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Armour (Local)\n+# to maximum Life",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_3484657501",
+        "text": "+# to Armour (Local)"
+      },
+      {
+        "id": "fractured.stat_3299347043",
+        "text": "+# to maximum Life"
+      }
+    ]
   },
   "BaseArmourAndLife3": {
     "mods": [
@@ -757,7 +874,18 @@
         "stat": "+(20-32) to Armour+(18-23) to maximum Life"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Armour (Local)\n+# to maximum Life",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_3484657501",
+        "text": "+# to Armour (Local)"
+      },
+      {
+        "id": "fractured.stat_3299347043",
+        "text": "+# to maximum Life"
+      }
+    ]
   },
   "BaseArmourEnergyShield2": {
     "mods": [
@@ -782,7 +910,18 @@
         "stat": "+(5-9) to Armour+(3-4) to maximum Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Armour (Local)\n+# to maximum Energy Shield (Local)",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_3484657501",
+        "text": "+# to Armour (Local)"
+      },
+      {
+        "id": "fractured.stat_4052037485",
+        "text": "+# to maximum Energy Shield (Local)"
+      }
+    ]
   },
   "BaseArmourEnergyShield22": {
     "mods": [
@@ -812,7 +951,18 @@
         "stat": "+(5-9) to Armour+(3-4) to maximum Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Armour (Local)\n+# to maximum Energy Shield (Local)",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_3484657501",
+        "text": "+# to Armour (Local)"
+      },
+      {
+        "id": "fractured.stat_4052037485",
+        "text": "+# to maximum Energy Shield (Local)"
+      }
+    ]
   },
   "BaseArmourEnergyShield222": {
     "mods": [
@@ -842,7 +992,18 @@
         "stat": "+(28-48) to Armour+(13-22) to maximum Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Armour (Local)\n+# to maximum Energy Shield (Local)",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_3484657501",
+        "text": "+# to Armour (Local)"
+      },
+      {
+        "id": "fractured.stat_4052037485",
+        "text": "+# to maximum Energy Shield (Local)"
+      }
+    ]
   },
   "BaseArmourEnergyShield3": {
     "mods": [
@@ -872,7 +1033,18 @@
         "stat": "+(49-85) to Armour+(23-28) to maximum Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Armour (Local)\n+# to maximum Energy Shield (Local)",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_3484657501",
+        "text": "+# to Armour (Local)"
+      },
+      {
+        "id": "fractured.stat_4052037485",
+        "text": "+# to maximum Energy Shield (Local)"
+      }
+    ]
   },
   "BaseArmourEvasion2": {
     "mods": [
@@ -897,7 +1069,18 @@
         "stat": "+(5-9) to Armour+(5-9) to Evasion Rating"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Armour (Local)\n+# to Evasion Rating (Local)",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_3484657501",
+        "text": "+# to Armour (Local)"
+      },
+      {
+        "id": "fractured.stat_53045048",
+        "text": "+# to Evasion Rating (Local)"
+      }
+    ]
   },
   "BaseArmourEvasion22": {
     "mods": [
@@ -927,7 +1110,18 @@
         "stat": "+(5-9) to Armour+(5-9) to Evasion Rating"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Armour (Local)\n+# to Evasion Rating (Local)",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_3484657501",
+        "text": "+# to Armour (Local)"
+      },
+      {
+        "id": "fractured.stat_53045048",
+        "text": "+# to Evasion Rating (Local)"
+      }
+    ]
   },
   "BaseArmourEvasion222": {
     "mods": [
@@ -962,7 +1156,18 @@
         "stat": "+(28-48) to Armour+(28-48) to Evasion Rating"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Armour (Local)\n+# to Evasion Rating (Local)",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_3484657501",
+        "text": "+# to Armour (Local)"
+      },
+      {
+        "id": "fractured.stat_53045048",
+        "text": "+# to Evasion Rating (Local)"
+      }
+    ]
   },
   "BaseEnergyShield2": {
     "mods": [
@@ -992,7 +1197,9 @@
         "stat": "+(12-16) to maximum Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Energy Shield (Local)",
+    "fracturedStatId": "fractured.stat_4052037485"
   },
   "BaseEnergyShield22": {
     "mods": [
@@ -1022,7 +1229,9 @@
         "stat": "+(17-23) to maximum Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Energy Shield (Local)",
+    "fracturedStatId": "fractured.stat_4052037485"
   },
   "BaseEnergyShield222": {
     "mods": [
@@ -1052,7 +1261,9 @@
         "stat": "+(31-38) to maximum Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Energy Shield (Local)",
+    "fracturedStatId": "fractured.stat_4052037485"
   },
   "BaseEnergyShield32": {
     "mods": [
@@ -1082,7 +1293,9 @@
         "stat": "+(39-49) to maximum Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Energy Shield (Local)",
+    "fracturedStatId": "fractured.stat_4052037485"
   },
   "BaseEnergyShieldAndLife": {
     "mods": [
@@ -1102,7 +1315,18 @@
         "stat": "+(8-10) to maximum Energy Shield+(18-23) to maximum Life"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Energy Shield (Local)\n+# to maximum Life",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_4052037485",
+        "text": "+# to maximum Energy Shield (Local)"
+      },
+      {
+        "id": "fractured.stat_3299347043",
+        "text": "+# to maximum Life"
+      }
+    ]
   },
   "BaseEnergyShieldAndLife22": {
     "mods": [
@@ -1142,7 +1366,18 @@
         "stat": "+(11-15) to maximum Energy Shield+(24-28) to maximum Life"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Energy Shield (Local)\n+# to maximum Life",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_4052037485",
+        "text": "+# to maximum Energy Shield (Local)"
+      },
+      {
+        "id": "fractured.stat_3299347043",
+        "text": "+# to maximum Life"
+      }
+    ]
   },
   "BaseEnergyShieldAndMana": {
     "mods": [
@@ -1152,7 +1387,18 @@
         "stat": "+(26-30) to maximum Energy Shield+(23-25) to maximum Mana"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Energy Shield (Local)\n+# to maximum Mana",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_4052037485",
+        "text": "+# to maximum Energy Shield (Local)"
+      },
+      {
+        "id": "fractured.stat_1050105434",
+        "text": "+# to maximum Mana"
+      }
+    ]
   },
   "BaseEnergyShieldAndMana2": {
     "mods": [
@@ -1167,7 +1413,18 @@
         "stat": "+(8-10) to maximum Energy Shield+(11-15) to maximum Mana"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Energy Shield (Local)\n+# to maximum Mana",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_4052037485",
+        "text": "+# to maximum Energy Shield (Local)"
+      },
+      {
+        "id": "fractured.stat_1050105434",
+        "text": "+# to maximum Mana"
+      }
+    ]
   },
   "BaseEnergyShieldAndMana22": {
     "mods": [
@@ -1187,7 +1444,18 @@
         "stat": "+(8-10) to maximum Energy Shield+(11-15) to maximum Mana"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Energy Shield (Local)\n+# to maximum Mana",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_4052037485",
+        "text": "+# to maximum Energy Shield (Local)"
+      },
+      {
+        "id": "fractured.stat_1050105434",
+        "text": "+# to maximum Mana"
+      }
+    ]
   },
   "BaseEnergyShieldAndMana222": {
     "mods": [
@@ -1202,7 +1470,18 @@
         "stat": "+(16-25) to maximum Energy Shield+(20-22) to maximum Mana"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Energy Shield (Local)\n+# to maximum Mana",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_4052037485",
+        "text": "+# to maximum Energy Shield (Local)"
+      },
+      {
+        "id": "fractured.stat_1050105434",
+        "text": "+# to maximum Mana"
+      }
+    ]
   },
   "BaseEnergyShieldAndMana3": {
     "mods": [
@@ -1217,7 +1496,18 @@
         "stat": "+(11-15) to maximum Energy Shield+(16-19) to maximum Mana"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Energy Shield (Local)\n+# to maximum Mana",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_4052037485",
+        "text": "+# to maximum Energy Shield (Local)"
+      },
+      {
+        "id": "fractured.stat_1050105434",
+        "text": "+# to maximum Mana"
+      }
+    ]
   },
   "BaseEvasion": {
     "mods": [
@@ -1247,7 +1537,9 @@
         "stat": "+(36-63) to Evasion Rating"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Evasion Rating (Local)",
+    "fracturedStatId": "fractured.stat_53045048"
   },
   "BaseEvasion2": {
     "mods": [
@@ -1277,7 +1569,9 @@
         "stat": "+(64-82) to Evasion Rating"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Evasion Rating (Local)",
+    "fracturedStatId": "fractured.stat_53045048"
   },
   "BaseEvasion3": {
     "mods": [
@@ -1312,7 +1606,9 @@
         "stat": "+(102-120) to Evasion Rating"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Evasion Rating (Local)",
+    "fracturedStatId": "fractured.stat_53045048"
   },
   "BaseEvasionAndLife": {
     "mods": [
@@ -1327,7 +1623,18 @@
         "stat": "+(14-20) to Evasion Rating+(18-23) to maximum Life"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Evasion Rating (Local)\n+# to maximum Life",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_53045048",
+        "text": "+# to Evasion Rating (Local)"
+      },
+      {
+        "id": "fractured.stat_3299347043",
+        "text": "+# to maximum Life"
+      }
+    ]
   },
   "BaseEvasionAndLife2": {
     "mods": [
@@ -1347,7 +1654,18 @@
         "stat": "+(14-20) to Evasion Rating+(18-23) to maximum Life"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Evasion Rating (Local)\n+# to maximum Life",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_53045048",
+        "text": "+# to Evasion Rating (Local)"
+      },
+      {
+        "id": "fractured.stat_3299347043",
+        "text": "+# to maximum Life"
+      }
+    ]
   },
   "BaseEvasionAndLife3": {
     "mods": [
@@ -1372,7 +1690,18 @@
         "stat": "+(14-20) to Evasion Rating+(18-23) to maximum Life"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Evasion Rating (Local)\n+# to maximum Life",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_53045048",
+        "text": "+# to Evasion Rating (Local)"
+      },
+      {
+        "id": "fractured.stat_3299347043",
+        "text": "+# to maximum Life"
+      }
+    ]
   },
   "BaseEvasionEnergyShield2": {
     "mods": [
@@ -1397,7 +1726,18 @@
         "stat": "+(5-9) to Evasion Rating+(3-4) to maximum Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Evasion Rating (Local)\n+# to maximum Energy Shield (Local)",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_53045048",
+        "text": "+# to Evasion Rating (Local)"
+      },
+      {
+        "id": "fractured.stat_4052037485",
+        "text": "+# to maximum Energy Shield (Local)"
+      }
+    ]
   },
   "BaseEvasionEnergyShield22": {
     "mods": [
@@ -1427,7 +1767,18 @@
         "stat": "+(5-9) to Evasion Rating+(3-4) to maximum Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Evasion Rating (Local)\n+# to maximum Energy Shield (Local)",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_53045048",
+        "text": "+# to Evasion Rating (Local)"
+      },
+      {
+        "id": "fractured.stat_4052037485",
+        "text": "+# to maximum Energy Shield (Local)"
+      }
+    ]
   },
   "BaseEvasionEnergyShield222": {
     "mods": [
@@ -1462,7 +1813,18 @@
         "stat": "+(28-48) to Evasion Rating+(13-22) to maximum Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Evasion Rating (Local)\n+# to maximum Energy Shield (Local)",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_53045048",
+        "text": "+# to Evasion Rating (Local)"
+      },
+      {
+        "id": "fractured.stat_4052037485",
+        "text": "+# to maximum Energy Shield (Local)"
+      }
+    ]
   },
   "BeltFlaskCharges": {
     "mods": [
@@ -1492,7 +1854,9 @@
         "stat": "(11-16)% increased Flask Charges gained"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Flask Charges gained",
+    "fracturedStatId": "fractured.stat_1452809865"
   },
   "BeltFlaskDuration": {
     "mods": [
@@ -1522,7 +1886,9 @@
         "stat": "(4-9)% increased Flask Effect Duration"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Flask Effect Duration",
+    "fracturedStatId": "fractured.stat_3741323227"
   },
   "BeltFlaskRecoveryRate": {
     "mods": [
@@ -1542,7 +1908,9 @@
         "stat": "(23-28)% increased Flask Life Recovery rate"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Flask Life Recovery rate",
+    "fracturedStatId": "fractured.stat_51994685"
   },
   "BeltFlaskRecoveryRateIncreasedFlask": {
     "mods": [
@@ -1557,7 +1925,9 @@
         "stat": "(29-34)% increased Flask Mana Recovery rate"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Flask Mana Recovery rate",
+    "fracturedStatId": "fractured.stat_1412217137"
   },
   "ChanceToFreeze": {
     "mods": [
@@ -1577,7 +1947,9 @@
         "stat": "(18-24)% chance to Freeze"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% chance to Freeze",
+    "fracturedStatId": "fractured.stat_2309614417"
   },
   "ChanceToFreeze2": {
     "mods": [
@@ -1597,7 +1969,9 @@
         "stat": "(25-32)% chance to Freeze"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% chance to Freeze",
+    "fracturedStatId": "fractured.stat_2309614417"
   },
   "ChanceToIgnite": {
     "mods": [
@@ -1617,7 +1991,9 @@
         "stat": "(18-24)% chance to Ignite"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% chance to Ignite",
+    "fracturedStatId": "fractured.stat_1335054179"
   },
   "ChanceToIgnite2": {
     "mods": [
@@ -1637,7 +2013,9 @@
         "stat": "(25-32)% chance to Ignite"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% chance to Ignite",
+    "fracturedStatId": "fractured.stat_1335054179"
   },
   "ChanceToShock": {
     "mods": [
@@ -1657,7 +2035,9 @@
         "stat": "(18-24)% chance to Shock"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% chance to Shock",
+    "fracturedStatId": "fractured.stat_1538773178"
   },
   "ChanceToShock2": {
     "mods": [
@@ -1677,7 +2057,9 @@
         "stat": "(25-32)% chance to Shock"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% chance to Shock",
+    "fracturedStatId": "fractured.stat_1538773178"
   },
   "ChanceToSuppressSpells": {
     "mods": [
@@ -1707,7 +2089,9 @@
         "stat": "+(8-10)% chance to Suppress Spell Damage"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% chance to Suppress Spell Damage",
+    "fracturedStatId": "fractured.stat_3680664274"
   },
   "ChanceToSuppressSpells2": {
     "mods": [
@@ -1737,7 +2121,9 @@
         "stat": "+(5-6)% chance to Suppress Spell Damage"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% chance to Suppress Spell Damage",
+    "fracturedStatId": "fractured.stat_3680664274"
   },
   "ChaosDOTMultiplier": {
     "mods": [
@@ -1762,7 +2148,9 @@
         "stat": "+(14-18)% to Chaos Damage over Time Multiplier"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Chaos Damage over Time Multiplier",
+    "fracturedStatId": "fractured.stat_4055307827"
   },
   "ChaosDOTMultiplier2": {
     "mods": [
@@ -1792,7 +2180,9 @@
         "stat": "+(26-35)% to Chaos Damage over Time Multiplier"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Chaos Damage over Time Multiplier",
+    "fracturedStatId": "fractured.stat_4055307827"
   },
   "ChaosDOTMultiplier22": {
     "mods": [
@@ -1822,7 +2212,9 @@
         "stat": "+(14-18)% to Chaos Damage over Time Multiplier"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Chaos Damage over Time Multiplier",
+    "fracturedStatId": "fractured.stat_4055307827"
   },
   "ChaosDamage": {
     "mods": [
@@ -1832,7 +2224,9 @@
         "stat": "Adds (27-41) to (55-69) Chaos Damage to Attacks"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Chaos Damage to Attacks",
+    "fracturedStatId": "fractured.stat_674553446"
   },
   "ChaosResistance": {
     "mods": [
@@ -1862,7 +2256,9 @@
         "stat": "+(11-15)% to Chaos Resistance"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Chaos Resistance",
+    "fracturedStatId": "fractured.stat_2923486259"
   },
   "ColdDOTMultiplier": {
     "mods": [
@@ -1892,7 +2288,9 @@
         "stat": "+(26-35)% to Cold Damage over Time Multiplier"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Cold Damage over Time Multiplier",
+    "fracturedStatId": "fractured.stat_1950806024"
   },
   "ColdDOTMultiplier2": {
     "mods": [
@@ -1922,7 +2320,9 @@
         "stat": "+(14-18)% to Cold Damage over Time Multiplier"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Cold Damage over Time Multiplier",
+    "fracturedStatId": "fractured.stat_1950806024"
   },
   "ColdDamage": {
     "mods": [
@@ -1952,7 +2352,9 @@
         "stat": "Adds (57-77) to (114-132) Cold Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Cold Damage (Local)",
+    "fracturedStatId": "fractured.stat_1037193709"
   },
   "ColdDamage2": {
     "mods": [
@@ -1982,7 +2384,9 @@
         "stat": "Adds (3-4) to (7-8) Cold Damage to Attacks"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Cold Damage to Attacks",
+    "fracturedStatId": "fractured.stat_4067062424"
   },
   "ColdDamage22": {
     "mods": [
@@ -2012,7 +2416,9 @@
         "stat": "Adds (31-42) to (62-71) Cold Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Cold Damage (Local)",
+    "fracturedStatId": "fractured.stat_1037193709"
   },
   "ColdDamageAddsTo22": {
     "mods": [
@@ -2042,7 +2448,9 @@
         "stat": "Adds (8-11) to (16-19) Cold Damage to Attacks"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Cold Damage to Attacks",
+    "fracturedStatId": "fractured.stat_4067062424"
   },
   "ColdDamageAddsTo222": {
     "mods": [
@@ -2072,7 +2480,9 @@
         "stat": "Adds (12-16) to (24-28) Cold Damage to Attacks"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Cold Damage to Attacks",
+    "fracturedStatId": "fractured.stat_4067062424"
   },
   "ColdDamagePercentage": {
     "mods": [
@@ -2097,7 +2507,9 @@
         "stat": "(10-12)% increased Cold Damage"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Cold Damage",
+    "fracturedStatId": "fractured.stat_3291658075"
   },
   "ColdDamagePercentage2": {
     "mods": [
@@ -2152,7 +2564,9 @@
         "stat": "(10-12)% increased Cold Damage"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Cold Damage",
+    "fracturedStatId": "fractured.stat_3291658075"
   },
   "ColdDamagePercentage3": {
     "mods": [
@@ -2182,7 +2596,9 @@
         "stat": "(13-15)% increased Cold Damage"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Cold Damage",
+    "fracturedStatId": "fractured.stat_3291658075"
   },
   "ColdDamagePercentagePrefix": {
     "mods": [
@@ -2212,7 +2628,9 @@
         "stat": "(60-84)% increased Cold Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Cold Damage",
+    "fracturedStatId": "fractured.stat_3291658075"
   },
   "ColdDamagePercentagePrefix2": {
     "mods": [
@@ -2242,7 +2660,9 @@
         "stat": "(40-54)% increased Cold Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Cold Damage",
+    "fracturedStatId": "fractured.stat_3291658075"
   },
   "ColdResistance": {
     "mods": [
@@ -2272,7 +2692,9 @@
         "stat": "+(24-29)% to Cold Resistance"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Cold Resistance",
+    "fracturedStatId": "fractured.stat_4220027924"
   },
   "CriticalStrikeChanceIncrease": {
     "mods": [
@@ -2302,7 +2724,9 @@
         "stat": "(20-24)% increased Critical Strike Chance with Bows"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Critical Strike Chance with Bows",
+    "fracturedStatId": "fractured.stat_2091591880"
   },
   "CriticalStrikeChanceIncrease2": {
     "mods": [
@@ -2332,7 +2756,9 @@
         "stat": "(15-19)% increased Critical Strike Chance"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Critical Strike Chance",
+    "fracturedStatId": "fractured.stat_2375316951"
   },
   "CriticalStrikeChanceIncreaseIncreasedGlobal2": {
     "mods": [
@@ -2362,7 +2788,9 @@
         "stat": "(15-19)% increased Global Critical Strike Chance"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Global Critical Strike Chance",
+    "fracturedStatId": "fractured.stat_587431675"
   },
   "CriticalStrikeMultiplier": {
     "mods": [
@@ -2392,7 +2820,9 @@
         "stat": "+(13-19)% to Critical Strike Multiplier with Bows"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Critical Strike Multiplier with Bows",
+    "fracturedStatId": "fractured.stat_1712221299"
   },
   "CriticalStrikeMultiplierToGlobal": {
     "mods": [
@@ -2427,7 +2857,9 @@
         "stat": "+(13-19)% to Global Critical Strike Multiplier"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Global Critical Strike Multiplier",
+    "fracturedStatId": "fractured.stat_3556824919"
   },
   "DamageTakenGainedAsLife": {
     "mods": [
@@ -2452,7 +2884,9 @@
         "stat": "(4-6)% of Damage taken Recouped as Life"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% of Damage taken Recouped as Life",
+    "fracturedStatId": "fractured.stat_1444556985"
   },
   "DamageWithWeaponTypeSkill": {
     "mods": [
@@ -2482,7 +2916,9 @@
         "stat": "(11-20)% increased Damage with Bow Skills"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Damage with Bow Skills",
+    "fracturedStatId": "fractured.stat_1241625305"
   },
   "Dexterity": {
     "mods": [
@@ -2512,7 +2948,9 @@
         "stat": "+(28-32) to Dexterity"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+# to Dexterity",
+    "fracturedStatId": "fractured.stat_3261801346"
   },
   "Dexterity2": {
     "mods": [
@@ -2542,7 +2980,9 @@
         "stat": "+(33-37) to Dexterity"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+# to Dexterity",
+    "fracturedStatId": "fractured.stat_3261801346"
   },
   "EnergyShieldDelay": {
     "mods": [
@@ -2572,7 +3012,9 @@
         "stat": "(27-34)% faster start of Energy Shield Recharge"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% faster start of Energy Shield Recharge",
+    "fracturedStatId": "fractured.stat_1782086450"
   },
   "EnergyShieldPercent": {
     "mods": [
@@ -2602,7 +3044,9 @@
         "stat": "(8-10)% increased maximum Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased maximum Energy Shield",
+    "fracturedStatId": "fractured.stat_2482852589"
   },
   "EnergyShieldPercent2": {
     "mods": [
@@ -2632,7 +3076,9 @@
         "stat": "(56-67)% increased Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Energy Shield (Local)",
+    "fracturedStatId": "fractured.stat_4015621042"
   },
   "EnergyShieldPercent22": {
     "mods": [
@@ -2662,7 +3108,9 @@
         "stat": "(43-55)% increased Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Energy Shield (Local)",
+    "fracturedStatId": "fractured.stat_4015621042"
   },
   "EnergyShieldPercentIncreasedEnergy2": {
     "mods": [
@@ -2692,7 +3140,18 @@
         "stat": "(14-20)% increased Energy Shield(8-9)% increased Stun and Block Recovery"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Energy Shield (Local)\n#% increased Stun and Block Recovery",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_4015621042",
+        "text": "#% increased Energy Shield (Local)"
+      },
+      {
+        "id": "fractured.stat_2511217560",
+        "text": "#% increased Stun and Block Recovery"
+      }
+    ]
   },
   "EnergyShieldRegeneration": {
     "mods": [
@@ -2722,7 +3181,9 @@
         "stat": "(24-26)% increased Energy Shield Recharge Rate"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Energy Shield Recharge Rate",
+    "fracturedStatId": "fractured.stat_2339757871"
   },
   "EvasionEnergyShieldPercent": {
     "mods": [
@@ -2752,7 +3213,9 @@
         "stat": "(43-55)% increased Evasion and Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Evasion and Energy Shield (Local)",
+    "fracturedStatId": "fractured.stat_1999113824"
   },
   "EvasionEnergyShieldPercent2": {
     "mods": [
@@ -2782,7 +3245,18 @@
         "stat": "(14-20)% increased Evasion and Energy Shield(8-9)% increased Stun and Block Recovery"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Evasion and Energy Shield (Local)\n#% increased Stun and Block Recovery",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_1999113824",
+        "text": "#% increased Evasion and Energy Shield (Local)"
+      },
+      {
+        "id": "fractured.stat_2511217560",
+        "text": "#% increased Stun and Block Recovery"
+      }
+    ]
   },
   "EvasionEnergyShieldPercent22": {
     "mods": [
@@ -2812,7 +3286,9 @@
         "stat": "(56-67)% increased Evasion and Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Evasion and Energy Shield (Local)",
+    "fracturedStatId": "fractured.stat_1999113824"
   },
   "EvasionPercent": {
     "mods": [
@@ -2842,7 +3318,9 @@
         "stat": "(43-55)% increased Evasion Rating"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Evasion Rating (Local)",
+    "fracturedStatId": "fractured.stat_124859000"
   },
   "EvasionPercent2": {
     "mods": [
@@ -2872,7 +3350,9 @@
         "stat": "(56-67)% increased Evasion Rating"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Evasion Rating (Local)",
+    "fracturedStatId": "fractured.stat_124859000"
   },
   "EvasionPercentIncreasedEvasion": {
     "mods": [
@@ -2902,7 +3382,18 @@
         "stat": "(14-20)% increased Evasion Rating(8-9)% increased Stun and Block Recovery"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Evasion Rating (Local)\n#% increased Stun and Block Recovery",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_124859000",
+        "text": "#% increased Evasion Rating (Local)"
+      },
+      {
+        "id": "fractured.stat_2511217560",
+        "text": "#% increased Stun and Block Recovery"
+      }
+    ]
   },
   "EvasionRatingPercent": {
     "mods": [
@@ -2932,7 +3423,9 @@
         "stat": "(14-18)% increased Evasion Rating"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Evasion Rating",
+    "fracturedStatId": "fractured.stat_2106365538"
   },
   "FireDOTMultiplier": {
     "mods": [
@@ -2962,7 +3455,9 @@
         "stat": "+(14-18)% to Fire Damage over Time Multiplier"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Fire Damage over Time Multiplier",
+    "fracturedStatId": "fractured.stat_3382807662"
   },
   "FireDOTMultiplier2": {
     "mods": [
@@ -2992,7 +3487,9 @@
         "stat": "+(26-35)% to Fire Damage over Time Multiplier"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Fire Damage over Time Multiplier",
+    "fracturedStatId": "fractured.stat_3382807662"
   },
   "FireDamage": {
     "mods": [
@@ -3022,7 +3519,9 @@
         "stat": "Adds (63-85) to (128-148) Fire Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Fire Damage (Local)",
+    "fracturedStatId": "fractured.stat_709508406"
   },
   "FireDamage2": {
     "mods": [
@@ -3052,7 +3551,9 @@
         "stat": "Adds (3-5) to (7-8) Fire Damage to Attacks"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Fire Damage to Attacks",
+    "fracturedStatId": "fractured.stat_1573130764"
   },
   "FireDamage22": {
     "mods": [
@@ -3082,7 +3583,9 @@
         "stat": "Adds (34-46) to (68-80) Fire Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Fire Damage (Local)",
+    "fracturedStatId": "fractured.stat_709508406"
   },
   "FireDamageAddsTo22": {
     "mods": [
@@ -3112,7 +3615,9 @@
         "stat": "Adds (9-12) to (19-22) Fire Damage to Attacks"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Fire Damage to Attacks",
+    "fracturedStatId": "fractured.stat_1573130764"
   },
   "FireDamageAddsTo222": {
     "mods": [
@@ -3142,7 +3647,9 @@
         "stat": "Adds (13-18) to (27-31) Fire Damage to Attacks"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Fire Damage to Attacks",
+    "fracturedStatId": "fractured.stat_1573130764"
   },
   "FireDamagePercentage": {
     "mods": [
@@ -3167,7 +3674,9 @@
         "stat": "(10-12)% increased Fire Damage"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Fire Damage",
+    "fracturedStatId": "fractured.stat_3962278098"
   },
   "FireDamagePercentage2": {
     "mods": [
@@ -3222,7 +3731,9 @@
         "stat": "(10-12)% increased Fire Damage"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Fire Damage",
+    "fracturedStatId": "fractured.stat_3962278098"
   },
   "FireDamagePercentage3": {
     "mods": [
@@ -3252,7 +3763,9 @@
         "stat": "(13-15)% increased Fire Damage"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Fire Damage",
+    "fracturedStatId": "fractured.stat_3962278098"
   },
   "FireDamagePercentagePrefix": {
     "mods": [
@@ -3282,7 +3795,9 @@
         "stat": "(60-84)% increased Fire Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Fire Damage",
+    "fracturedStatId": "fractured.stat_3962278098"
   },
   "FireDamagePercentagePrefix2": {
     "mods": [
@@ -3312,7 +3827,9 @@
         "stat": "(40-54)% increased Fire Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Fire Damage",
+    "fracturedStatId": "fractured.stat_3962278098"
   },
   "FireResistance": {
     "mods": [
@@ -3342,7 +3859,9 @@
         "stat": "+(24-29)% to Fire Resistance"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Fire Resistance",
+    "fracturedStatId": "fractured.stat_3372524247"
   },
   "FlaskEffect": {
     "mods": [
@@ -3362,7 +3881,9 @@
         "stat": "Flasks applied to you have (4-6)% increased Effect"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Flasks applied to you have #% increased Effect",
+    "fracturedStatId": "fractured.stat_114734841"
   },
   "GlobalDamageOverTimeMultiplier": {
     "mods": [
@@ -3397,7 +3918,9 @@
         "stat": "+(20-23)% to Damage over Time Multiplier"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Damage over Time Multiplier",
+    "fracturedStatId": "fractured.stat_3988349707"
   },
   "GlobalDamageOverTimeMultiplier2": {
     "mods": [
@@ -3427,7 +3950,9 @@
         "stat": "+(7-11)% to Damage over Time Multiplier"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Damage over Time Multiplier",
+    "fracturedStatId": "fractured.stat_3988349707"
   },
   "GlobalDamageOverTimeMultiplier22": {
     "mods": [
@@ -3457,7 +3982,9 @@
         "stat": "+(7-11)% to Damage over Time Multiplier with Attack Skills"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Damage over Time Multiplier with Attack Skills",
+    "fracturedStatId": "fractured.stat_693959086"
   },
   "GlobalDamageTypeGemLevel": {
     "mods": [
@@ -3467,7 +3994,9 @@
         "stat": "+1 to Level of all Chaos Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Chaos Skill Gems",
+    "fracturedStatId": "fractured.stat_67169579"
   },
   "GlobalDamageTypeGemLevel1To": {
     "mods": [
@@ -3477,7 +4006,9 @@
         "stat": "+1 to Level of all Cold Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Cold Skill Gems",
+    "fracturedStatId": "fractured.stat_1078455967"
   },
   "GlobalDamageTypeGemLevel1To2": {
     "mods": [
@@ -3487,7 +4018,9 @@
         "stat": "+1 to Level of all Fire Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Fire Skill Gems",
+    "fracturedStatId": "fractured.stat_599749213"
   },
   "GlobalDamageTypeGemLevel1To3": {
     "mods": [
@@ -3497,7 +4030,9 @@
         "stat": "+1 to Level of all Lightning Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Lightning Skill Gems",
+    "fracturedStatId": "fractured.stat_1147690586"
   },
   "GlobalDamageTypeGemLevel1To4": {
     "mods": [
@@ -3507,7 +4042,9 @@
         "stat": "+1 to Level of all Physical Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Physical Skill Gems",
+    "fracturedStatId": "fractured.stat_619213329"
   },
   "GlobalSkillGemLevel": {
     "mods": [
@@ -3517,7 +4054,9 @@
         "stat": "+1 to Level of all Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Skill Gems",
+    "fracturedStatId": "fractured.stat_4283407333"
   },
   "IncreaseSocketedGemLevel": {
     "mods": [
@@ -3527,7 +4066,9 @@
         "stat": "+(1-2) to Level of all Spell Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Spell Skill Gems",
+    "fracturedStatId": "fractured.stat_124131830"
   },
   "IncreaseSocketedGemLevel1To2": {
     "mods": [
@@ -3537,7 +4078,9 @@
         "stat": "+1 to Level of Socketed Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of Socketed Gems",
+    "fracturedStatId": "fractured.stat_2843100721"
   },
   "IncreaseSocketedGemLevel2": {
     "mods": [
@@ -3547,7 +4090,9 @@
         "stat": "+1 to Level of all Spell Skill Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of all Spell Skill Gems",
+    "fracturedStatId": "fractured.stat_124131830"
   },
   "IncreasedAccuracy": {
     "mods": [
@@ -3577,7 +4122,9 @@
         "stat": "+(80-130) to Accuracy Rating"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+# to Accuracy Rating (Local)",
+    "fracturedStatId": "fractured.stat_691932474"
   },
   "IncreasedAccuracy2": {
     "mods": [
@@ -3607,7 +4154,9 @@
         "stat": "+(131-215) to Accuracy Rating"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+# to Accuracy Rating (Local)",
+    "fracturedStatId": "fractured.stat_691932474"
   },
   "IncreasedAccuracy22": {
     "mods": [
@@ -3637,7 +4186,9 @@
         "stat": "+(50-100) to Accuracy Rating"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+# to Accuracy Rating",
+    "fracturedStatId": "fractured.stat_803737631"
   },
   "IncreasedAccuracy222": {
     "mods": [
@@ -3667,7 +4218,9 @@
         "stat": "+(100-165) to Accuracy Rating"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+# to Accuracy Rating",
+    "fracturedStatId": "fractured.stat_803737631"
   },
   "IncreasedAttackSpeed": {
     "mods": [
@@ -3697,7 +4250,9 @@
         "stat": "(14-16)% increased Attack Speed"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Attack Speed (Local)",
+    "fracturedStatId": "fractured.stat_210067635"
   },
   "IncreasedAttackSpeed2": {
     "mods": [
@@ -3707,7 +4262,9 @@
         "stat": "(5-7)% increased Attack Speed"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Attack Speed",
+    "fracturedStatId": "fractured.stat_681332047"
   },
   "IncreasedAttackSpeed22": {
     "mods": [
@@ -3732,7 +4289,9 @@
         "stat": "(5-7)% increased Attack Speed"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Attack Speed",
+    "fracturedStatId": "fractured.stat_681332047"
   },
   "IncreasedCastSpeed": {
     "mods": [
@@ -3762,7 +4321,9 @@
         "stat": "(20-25)% increased Cast Speed"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Cast Speed",
+    "fracturedStatId": "fractured.stat_2891184298"
   },
   "IncreasedCastSpeed2": {
     "mods": [
@@ -3782,7 +4343,9 @@
         "stat": "(5-8)% increased Cast Speed"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Cast Speed",
+    "fracturedStatId": "fractured.stat_2891184298"
   },
   "IncreasedCastSpeed22": {
     "mods": [
@@ -3807,7 +4370,9 @@
         "stat": "(5-8)% increased Cast Speed"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Cast Speed",
+    "fracturedStatId": "fractured.stat_2891184298"
   },
   "IncreasedCastSpeed3": {
     "mods": [
@@ -3837,7 +4402,9 @@
         "stat": "(13-16)% increased Cast Speed"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Cast Speed",
+    "fracturedStatId": "fractured.stat_2891184298"
   },
   "IncreasedEnergyShield": {
     "mods": [
@@ -3867,7 +4434,9 @@
         "stat": "+(23-26) to maximum Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Energy Shield",
+    "fracturedStatId": "fractured.stat_3489782002"
   },
   "IncreasedEnergyShield2": {
     "mods": [
@@ -3897,7 +4466,9 @@
         "stat": "+(27-31) to maximum Energy Shield"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Energy Shield",
+    "fracturedStatId": "fractured.stat_3489782002"
   },
   "IncreasedEvasionRating": {
     "mods": [
@@ -3927,7 +4498,9 @@
         "stat": "+(36-60) to Evasion Rating"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Evasion Rating",
+    "fracturedStatId": "fractured.stat_2144192055"
   },
   "IncreasedLife": {
     "mods": [
@@ -3957,7 +4530,9 @@
         "stat": "+(40-54) to maximum Life"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Life",
+    "fracturedStatId": "fractured.stat_3299347043"
   },
   "IncreasedLife2": {
     "mods": [
@@ -3987,7 +4562,9 @@
         "stat": "+(55-69) to maximum Life"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Life",
+    "fracturedStatId": "fractured.stat_3299347043"
   },
   "IncreasedLife22": {
     "mods": [
@@ -4017,7 +4594,9 @@
         "stat": "+(70-84) to maximum Life"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Life",
+    "fracturedStatId": "fractured.stat_3299347043"
   },
   "IncreasedLife3": {
     "mods": [
@@ -4047,7 +4626,9 @@
         "stat": "+(85-99) to maximum Life"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Life",
+    "fracturedStatId": "fractured.stat_3299347043"
   },
   "IncreasedLife4": {
     "mods": [
@@ -4077,7 +4658,9 @@
         "stat": "+(115-129) to maximum Life"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Life",
+    "fracturedStatId": "fractured.stat_3299347043"
   },
   "IncreasedMana": {
     "mods": [
@@ -4107,7 +4690,9 @@
         "stat": "+(120-139) to maximum Mana"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Mana",
+    "fracturedStatId": "fractured.stat_1050105434"
   },
   "IncreasedMana2": {
     "mods": [
@@ -4137,7 +4722,9 @@
         "stat": "+(45-49) to maximum Mana"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Mana",
+    "fracturedStatId": "fractured.stat_1050105434"
   },
   "IncreasedMana22": {
     "mods": [
@@ -4167,7 +4754,9 @@
         "stat": "+(50-54) to maximum Mana"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Mana",
+    "fracturedStatId": "fractured.stat_1050105434"
   },
   "IncreasedMana222": {
     "mods": [
@@ -4197,7 +4786,9 @@
         "stat": "+(100-109) to maximum Mana"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Mana",
+    "fracturedStatId": "fractured.stat_1050105434"
   },
   "IncreasedMana3": {
     "mods": [
@@ -4227,7 +4818,9 @@
         "stat": "+(55-59) to maximum Mana"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Mana",
+    "fracturedStatId": "fractured.stat_1050105434"
   },
   "IncreasedPhysicalDamageReductionRating": {
     "mods": [
@@ -4257,7 +4850,9 @@
         "stat": "+(61-138) to Armour"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Armour",
+    "fracturedStatId": "fractured.stat_809229260"
   },
   "IncreasedPhysicalDamageReductionRatingPercent": {
     "mods": [
@@ -4287,7 +4882,9 @@
         "stat": "(14-18)% increased Armour"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Armour",
+    "fracturedStatId": "fractured.stat_2866361420"
   },
   "IncreasedShieldBlockPercentage": {
     "mods": [
@@ -4317,7 +4914,9 @@
         "stat": "(52-57)% increased Chance to Block"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Chance to Block",
+    "fracturedStatId": "fractured.stat_2481353198"
   },
   "IncreasedWeaponElementalDamagePercent": {
     "mods": [
@@ -4347,7 +4946,9 @@
         "stat": "(5-10)% increased Elemental Damage with Attack Skills"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Elemental Damage with Attack Skills",
+    "fracturedStatId": "fractured.stat_387439868"
   },
   "IncreasedWeaponElementalDamagePercent2": {
     "mods": [
@@ -4402,7 +5003,9 @@
         "stat": "(11-20)% increased Elemental Damage with Attack Skills"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Elemental Damage with Attack Skills",
+    "fracturedStatId": "fractured.stat_387439868"
   },
   "IncreasedWeaponElementalDamagePercent222": {
     "mods": [
@@ -4432,7 +5035,9 @@
         "stat": "(21-30)% increased Elemental Damage with Attack Skills"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Elemental Damage with Attack Skills",
+    "fracturedStatId": "fractured.stat_387439868"
   },
   "Intelligence": {
     "mods": [
@@ -4462,7 +5067,9 @@
         "stat": "+(28-32) to Intelligence"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+# to Intelligence",
+    "fracturedStatId": "fractured.stat_328541901"
   },
   "Intelligence2": {
     "mods": [
@@ -4492,7 +5099,9 @@
         "stat": "+(33-37) to Intelligence"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+# to Intelligence",
+    "fracturedStatId": "fractured.stat_328541901"
   },
   "ItemFoundRarityIncrease": {
     "mods": [
@@ -4507,7 +5116,9 @@
         "stat": "(6-10)% increased Rarity of Items found"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Rarity of Items found",
+    "fracturedStatId": "fractured.stat_3917489142"
   },
   "ItemFoundRarityIncrease2": {
     "mods": [
@@ -4532,7 +5143,9 @@
         "stat": "(6-10)% increased Rarity of Items found"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Rarity of Items found",
+    "fracturedStatId": "fractured.stat_3917489142"
   },
   "ItemFoundRarityIncreasePrefix": {
     "mods": [
@@ -4547,7 +5160,9 @@
         "stat": "(8-12)% increased Rarity of Items found"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Rarity of Items found",
+    "fracturedStatId": "fractured.stat_3917489142"
   },
   "ItemFoundRarityIncreasePrefix2": {
     "mods": [
@@ -4567,7 +5182,9 @@
         "stat": "(8-12)% increased Rarity of Items found"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Rarity of Items found",
+    "fracturedStatId": "fractured.stat_3917489142"
   },
   "ItemFoundRarityIncreasePrefix3": {
     "mods": [
@@ -4592,7 +5209,9 @@
         "stat": "(8-12)% increased Rarity of Items found"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Rarity of Items found",
+    "fracturedStatId": "fractured.stat_3917489142"
   },
   "LifeGainPerTarget": {
     "mods": [
@@ -4602,7 +5221,9 @@
         "stat": "Gain 2 Life per Enemy Hit with Attacks"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "Gain # Life per Enemy Hit with Attacks",
+    "fracturedStatId": "fractured.stat_2797971005"
   },
   "LifeGainPerTarget2": {
     "type": "Suffix",
@@ -4622,7 +5243,9 @@
         "name": "of Rejuvenation",
         "stat": "Gain 2 Life per Enemy Hit with Attacks"
       }
-    ]
+    ],
+    "displayName": "Gain # Life per Enemy Hit with Attacks",
+    "fracturedStatId": "fractured.stat_2797971005"
   },
   "LifeGainPerTargetGrantsLife2": {
     "mods": [
@@ -4652,7 +5275,9 @@
         "stat": "Grants (11-14) Life per Enemy Hit"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "Grants # Life per Enemy Hit",
+    "fracturedStatId": "fractured.stat_821021828"
   },
   "LifeGainedFromEnemyDeath": {
     "mods": [
@@ -4682,7 +5307,9 @@
         "stat": "Gain (12-18) Life per Enemy Killed"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "Gain # Life per Enemy Killed",
+    "fracturedStatId": "fractured.stat_3695891184"
   },
   "LifeLeech": {
     "mods": [
@@ -4692,7 +5319,9 @@
         "stat": "(0.2-0.4)% of Physical Attack Damage Leeched as Life"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% of Physical Attack Damage Leeched as Life",
+    "fracturedStatId": "fractured.stat_3593843976"
   },
   "LifeLeech2": {
     "type": "Suffix",
@@ -4712,7 +5341,9 @@
         "name": "of the Remora",
         "stat": "(0.2-0.4)% of Physical Attack Damage Leeched as Life"
       }
-    ]
+    ],
+    "displayName": "#% of Physical Attack Damage Leeched as Life",
+    "fracturedStatId": "fractured.stat_3593843976"
   },
   "LifeLeechAttackWeapons2": {
     "mods": [
@@ -4732,7 +5363,9 @@
         "stat": "(2-2.4)% of Physical Attack Damage Leeched as Life"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% of Physical Attack Damage Leeched as Life (Local)",
+    "fracturedStatId": "fractured.stat_55876295"
   },
   "LifeLeechJewellery222": {
     "mods": [
@@ -4742,7 +5375,9 @@
         "stat": "(0.6-0.8)% of Physical Attack Damage Leeched as Mana"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% of Physical Attack Damage Leeched as Mana",
+    "fracturedStatId": "fractured.stat_3237948413"
   },
   "LifeRegenerationBodyArmour": {
     "mods": [
@@ -4772,7 +5407,9 @@
         "stat": "Regenerate (48.1-64) Life per second"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "Regenerate # Life per second",
+    "fracturedStatId": "fractured.stat_3325883026"
   },
   "LifeRegenerationBoots": {
     "mods": [
@@ -4802,7 +5439,9 @@
         "stat": "Regenerate (16.1-24) Life per second"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "Regenerate # Life per second",
+    "fracturedStatId": "fractured.stat_3325883026"
   },
   "LifeRegenerationHelmets": {
     "mods": [
@@ -4842,7 +5481,9 @@
         "stat": "Regenerate (8.1-16) Life per second"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "Regenerate # Life per second",
+    "fracturedStatId": "fractured.stat_3325883026"
   },
   "LifeRegenerationRate": {
     "mods": [
@@ -4872,7 +5513,9 @@
         "stat": "(9-11)% increased Life Regeneration rate"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Life Regeneration rate",
+    "fracturedStatId": "fractured.stat_44972811"
   },
   "LifeRegenerationShield": {
     "mods": [
@@ -4902,7 +5545,9 @@
         "stat": "Regenerate (32.1-48) Life per second"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "Regenerate # Life per second",
+    "fracturedStatId": "fractured.stat_3325883026"
   },
   "LightRadiusAndAccuracy": {
     "mods": [
@@ -4912,7 +5557,18 @@
         "stat": "(12-15)% increased Global Accuracy Rating10% increased Light Radius"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Light Radius\n+# to Accuracy Rating",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_1263695895",
+        "text": "#% increased Light Radius"
+      },
+      {
+        "id": "fractured.stat_803737631",
+        "text": "+# to Accuracy Rating"
+      }
+    ]
   },
   "LightRadiusAndAccuracyIncreasedGlobal": {
     "mods": [
@@ -4922,7 +5578,18 @@
         "stat": "(16-20)% increased Global Accuracy Rating15% increased Light Radius"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Light Radius\n#% increased Global Accuracy Rating",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_1263695895",
+        "text": "#% increased Light Radius"
+      },
+      {
+        "id": "fractured.stat_624954515",
+        "text": "#% increased Global Accuracy Rating"
+      }
+    ]
   },
   "LightRadiusAndAccuracyIncreasedGlobal2": {
     "mods": [
@@ -4932,7 +5599,18 @@
         "stat": "(9-11)% increased Global Accuracy Rating5% increased Light Radius"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Light Radius\n#% increased Global Accuracy Rating",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_1263695895",
+        "text": "#% increased Light Radius"
+      },
+      {
+        "id": "fractured.stat_624954515",
+        "text": "#% increased Global Accuracy Rating"
+      }
+    ]
   },
   "LightningDamage": {
     "mods": [
@@ -4962,7 +5640,9 @@
         "stat": "Adds (11-14) to (208-242) Lightning Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Lightning Damage (Local)",
+    "fracturedStatId": "fractured.stat_3336890334"
   },
   "LightningDamage2": {
     "mods": [
@@ -4972,7 +5652,9 @@
         "stat": "Adds 1 to (14-15) Lightning Damage to Attacks"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Lightning Damage to Attacks",
+    "fracturedStatId": "fractured.stat_1754445556"
   },
   "LightningDamage22": {
     "mods": [
@@ -5002,7 +5684,9 @@
         "stat": "Adds (5-8) to (112-131) Lightning Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Lightning Damage (Local)",
+    "fracturedStatId": "fractured.stat_3336890334"
   },
   "LightningDamageAddsTo2": {
     "mods": [
@@ -5027,7 +5711,9 @@
         "stat": "Adds (1-2) to (22-23) Lightning Damage to Attacks"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Lightning Damage to Attacks",
+    "fracturedStatId": "fractured.stat_1754445556"
   },
   "LightningDamageAddsTo22": {
     "mods": [
@@ -5057,7 +5743,9 @@
         "stat": "Adds (1-3) to (33-34) Lightning Damage to Attacks"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Lightning Damage to Attacks",
+    "fracturedStatId": "fractured.stat_1754445556"
   },
   "LightningDamageAddsTo222": {
     "mods": [
@@ -5087,7 +5775,9 @@
         "stat": "Adds (2-4) to (44-50) Lightning Damage to Attacks"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Lightning Damage to Attacks",
+    "fracturedStatId": "fractured.stat_1754445556"
   },
   "LightningDamagePercentage": {
     "mods": [
@@ -5112,7 +5802,9 @@
         "stat": "(10-12)% increased Lightning Damage"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Lightning Damage",
+    "fracturedStatId": "fractured.stat_2231156303"
   },
   "LightningDamagePercentage2": {
     "mods": [
@@ -5167,7 +5859,9 @@
         "stat": "(23-28)% increased Lightning Damage"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Lightning Damage",
+    "fracturedStatId": "fractured.stat_2231156303"
   },
   "LightningDamagePercentage3": {
     "mods": [
@@ -5197,7 +5891,9 @@
         "stat": "(13-15)% increased Lightning Damage"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Lightning Damage",
+    "fracturedStatId": "fractured.stat_2231156303"
   },
   "LightningDamagePercentagePrefix": {
     "mods": [
@@ -5227,7 +5923,9 @@
         "stat": "(60-84)% increased Lightning Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Lightning Damage",
+    "fracturedStatId": "fractured.stat_2231156303"
   },
   "LightningDamagePercentagePrefix2": {
     "mods": [
@@ -5257,7 +5955,9 @@
         "stat": "(40-54)% increased Lightning Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Lightning Damage",
+    "fracturedStatId": "fractured.stat_2231156303"
   },
   "LightningResistance": {
     "mods": [
@@ -5287,7 +5987,9 @@
         "stat": "+(24-29)% to Lightning Resistance"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Lightning Resistance",
+    "fracturedStatId": "fractured.stat_1671376347"
   },
   "LocalAttributeRequirements": {
     "mods": [
@@ -5297,7 +5999,9 @@
         "stat": "18% reduced Attribute Requirements"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Attribute Requirements",
+    "fracturedStatId": "fractured.stat_3639275092"
   },
   "LocalAttributeRequirements32Reduced": {
     "mods": [
@@ -5307,7 +6011,9 @@
         "stat": "32% reduced Attribute Requirements"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Attribute Requirements",
+    "fracturedStatId": "fractured.stat_3639275092"
   },
   "LocalChaosDamage": {
     "mods": [
@@ -5317,7 +6023,9 @@
         "stat": "Adds (98-149) to (183-280) Chaos Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Chaos Damage (Local)",
+    "fracturedStatId": "fractured.stat_2223678961"
   },
   "LocalChaosDamage2": {
     "mods": [
@@ -5327,7 +6035,9 @@
         "stat": "Adds (56-87) to (105-160) Chaos Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Chaos Damage (Local)",
+    "fracturedStatId": "fractured.stat_2223678961"
   },
   "LocalIncreasedPhysicalDamagePercentAndAccuracyRating": {
     "mods": [
@@ -5357,7 +6067,18 @@
         "stat": "(35-44)% increased Physical Damage+(73-97) to Accuracy Rating"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Physical Damage (Local)\n+# to Accuracy Rating (Local)",
+    "hybridStats": [
+      {
+        "id": "NOT_FOUND",
+        "text": "#% increased Physical Damage (Local)"
+      },
+      {
+        "id": "fractured.stat_691932474",
+        "text": "+# to Accuracy Rating (Local)"
+      }
+    ]
   },
   "LocalPhysicalDamagePercent": {
     "mods": [
@@ -5387,7 +6108,9 @@
         "stat": "(85-109)% increased Physical Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Physical Damage",
+    "fracturedStatId": "fractured.stat_1509134228"
   },
   "ManaGainedFromEnemyDeath": {
     "mods": [
@@ -5417,7 +6140,9 @@
         "stat": "Gain (7-10) Mana per Enemy Killed"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "Gain # Mana per Enemy Killed",
+    "fracturedStatId": "fractured.stat_1368271171"
   },
   "ManaLeech": {
     "mods": [
@@ -5427,7 +6152,9 @@
         "stat": "(2.6-3.2)% of Physical Attack Damage Leeched as Mana"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% of Physical Attack Damage Leeched as Mana (Local)",
+    "fracturedStatId": "fractured.stat_669069897"
   },
   "ManaLeech2": {
     "mods": [
@@ -5437,7 +6164,9 @@
         "stat": "(0.2-0.4)% of Physical Attack Damage Leeched as Mana"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% of Physical Attack Damage Leeched as Mana",
+    "fracturedStatId": "fractured.stat_3237948413"
   },
   "ManaLeech222": {
     "mods": [
@@ -5447,7 +6176,9 @@
         "stat": "(0.2-0.4)% of Physical Attack Damage Leeched as Mana"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% of Physical Attack Damage Leeched as Mana",
+    "fracturedStatId": "fractured.stat_3237948413"
   },
   "ManaRegeneration": {
     "mods": [
@@ -5477,7 +6208,9 @@
         "stat": "(33-45)% increased Mana Regeneration Rate"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Mana Regeneration Rate",
+    "fracturedStatId": "fractured.stat_789117908"
   },
   "ManaRegeneration2": {
     "mods": [
@@ -5507,7 +6240,9 @@
         "stat": "(20-29)% increased Mana Regeneration Rate"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Mana Regeneration Rate",
+    "fracturedStatId": "fractured.stat_789117908"
   },
   "MaximumChaosResistance": {
     "type": "Suffix",
@@ -5527,7 +6262,9 @@
         "name": "of Regularity",
         "stat": "+1% to maximum Chaos Resistance"
       }
-    ]
+    ],
+    "displayName": "+#% to maximum Chaos Resistance",
+    "fracturedStatId": "fractured.stat_1301765461"
   },
   "MaximumColdResist": {
     "type": "Suffix",
@@ -5547,7 +6284,9 @@
         "name": "of Furs",
         "stat": "+1% to maximum Cold Resistance"
       }
-    ]
+    ],
+    "displayName": "+#% to maximum Cold Resistance",
+    "fracturedStatId": "fractured.stat_3676141501"
   },
   "MaximumFireResist": {
     "type": "Suffix",
@@ -5567,7 +6306,9 @@
         "name": "of the Bushfire",
         "stat": "+1% to maximum Fire Resistance"
       }
-    ]
+    ],
+    "displayName": "+#% to maximum Fire Resistance",
+    "fracturedStatId": "fractured.stat_4095671657"
   },
   "MaximumLightningResistance": {
     "type": "Suffix",
@@ -5587,7 +6328,9 @@
         "name": "of Impedance",
         "stat": "+1% to maximum Lightning Resistance"
       }
-    ]
+    ],
+    "displayName": "+#% to maximum Lightning Resistance",
+    "fracturedStatId": "fractured.stat_1011760251"
   },
   "MaximumResistances": {
     "type": "Suffix",
@@ -5602,7 +6345,9 @@
         "name": "of the Sempiternal",
         "stat": "+1% to all maximum Resistances"
       }
-    ]
+    ],
+    "displayName": "+#% to all maximum Resistances",
+    "fracturedStatId": "fractured.stat_569299859"
   },
   "MinionAccuracyRating": {
     "mods": [
@@ -5632,7 +6377,9 @@
         "stat": "Minions have +(131-215) to Accuracy Rating"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "Minions have +# to Accuracy Rating",
+    "fracturedStatId": "fractured.stat_1661151735"
   },
   "MinionAttackSpeedAndCastSpeed": {
     "mods": [
@@ -5662,7 +6409,9 @@
         "stat": "Minions have (11-13)% increased Attack and Cast Speed"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "Minions have #% increased Attack and Cast Speed",
+    "fracturedStatId": "fractured.stat_3091578504"
   },
   "MinionCriticalStrikeChance": {
     "mods": [
@@ -5692,7 +6441,9 @@
         "stat": "Minions have (20-39)% increased Critical Strike Chance"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "Minions have #% increased Critical Strike Chance",
+    "fracturedStatId": "fractured.stat_491450213"
   },
   "MinionCriticalStrikeMultiplier": {
     "mods": [
@@ -5722,7 +6473,9 @@
         "stat": "Minions have +(15-19)% to Critical Strike Multiplier"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "Minions have +#% to Critical Strike Multiplier",
+    "fracturedStatId": "fractured.stat_1854213750"
   },
   "MinionDamageMana": {
     "mods": [
@@ -5752,7 +6505,18 @@
         "stat": "+(25-28) to maximum ManaMinions deal (15-19)% increased Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to maximum Mana\nMinions deal #% increased Damage",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_1050105434",
+        "text": "+# to maximum Mana"
+      },
+      {
+        "id": "fractured.stat_1589917703",
+        "text": "Minions deal #% increased Damage"
+      }
+    ]
   },
   "MinionDamagePercentage": {
     "mods": [
@@ -5782,7 +6546,9 @@
         "stat": "Minions deal (40-54)% increased Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Minions deal #% increased Damage",
+    "fracturedStatId": "fractured.stat_1589917703"
   },
   "MovementVelocity": {
     "type": "Prefix",
@@ -5812,7 +6578,9 @@
         "name": "Sprinter's",
         "stat": "15% increased Movement Speed"
       }
-    ]
+    ],
+    "displayName": "#% increased Movement Speed",
+    "fracturedStatId": "fractured.stat_2250533757"
   },
   "PhysicalDOTMultiplier": {
     "mods": [
@@ -5842,7 +6610,9 @@
         "stat": "+(14-18)% to Physical Damage over Time Multiplier"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Physical Damage over Time Multiplier",
+    "fracturedStatId": "fractured.stat_1314617696"
   },
   "PhysicalDOTMultiplier2": {
     "mods": [
@@ -5867,7 +6637,9 @@
         "stat": "+(26-35)% to Physical Damage over Time Multiplier"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+#% to Physical Damage over Time Multiplier",
+    "fracturedStatId": "fractured.stat_1314617696"
   },
   "PhysicalDamage": {
     "mods": [
@@ -5897,7 +6669,9 @@
         "stat": "Adds (8-11) to (16-18) Physical Damage to Attacks"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Physical Damage to Attacks",
+    "fracturedStatId": "fractured.stat_3032590688"
   },
   "PhysicalDamage2": {
     "type": "Prefix",
@@ -5922,7 +6696,9 @@
         "name": "Glinting",
         "stat": "Adds 1 to 2 Physical Damage to Attacks"
       }
-    ]
+    ],
+    "displayName": "Adds # to # Physical Damage to Attacks",
+    "fracturedStatId": "fractured.stat_3032590688"
   },
   "PhysicalDamage22": {
     "mods": [
@@ -5952,7 +6728,9 @@
         "stat": "Adds (11-14) to (21-25) Physical Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Physical Damage (Local)",
+    "fracturedStatId": "fractured.stat_1940865751"
   },
   "PhysicalDamage222": {
     "mods": [
@@ -5982,7 +6760,9 @@
         "stat": "Adds (5-7) to (11-12) Physical Damage to Attacks"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Physical Damage to Attacks",
+    "fracturedStatId": "fractured.stat_3032590688"
   },
   "PhysicalDamageAddsTo2": {
     "mods": [
@@ -6012,7 +6792,9 @@
         "stat": "Adds (16-22) to (35-40) Physical Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Physical Damage (Local)",
+    "fracturedStatId": "fractured.stat_1940865751"
   },
   "PhysicalDamageAddsTo222": {
     "mods": [
@@ -6042,7 +6824,9 @@
         "stat": "Adds (2-3) to (4-5) Physical Damage to Attacks"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Physical Damage to Attacks",
+    "fracturedStatId": "fractured.stat_3032590688"
   },
   "ProjectileSpeed": {
     "mods": [
@@ -6072,7 +6856,9 @@
         "stat": "(10-17)% increased Projectile Speed"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Projectile Speed",
+    "fracturedStatId": "fractured.stat_3759663284"
   },
   "ReducedExtraDamageFromCrits": {
     "mods": [
@@ -6097,7 +6883,9 @@
         "stat": "You take (21-30)% reduced Extra Damage from Critical Strikes"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "You take #% reduced Extra Damage from Critical Strikes",
+    "fracturedStatId": "fractured.stat_3855016469"
   },
   "ReducedPhysicalDamageTaken": {
     "type": "Suffix",
@@ -6127,7 +6915,9 @@
         "name": "of the Watchman",
         "stat": "4% additional Physical Damage Reduction"
       }
-    ]
+    ],
+    "displayName": "#% additional Physical Damage Reduction",
+    "fracturedStatId": "fractured.stat_3771516363"
   },
   "SocketedBowGemLevel": {
     "mods": [
@@ -6142,7 +6932,9 @@
         "stat": "+1 to Level of Socketed Bow Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of Socketed Bow Gems",
+    "fracturedStatId": "fractured.stat_2027269580"
   },
   "SocketedChaosGemLevel": {
     "mods": [
@@ -6157,7 +6949,9 @@
         "stat": "+1 to Level of Socketed Chaos Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of Socketed Chaos Gems",
+    "fracturedStatId": "fractured.stat_2675603254"
   },
   "SocketedColdGemLevel": {
     "type": "Prefix",
@@ -6172,7 +6966,9 @@
         "name": "Frost Weaver's",
         "stat": "+1 to Level of Socketed Cold Gems"
       }
-    ]
+    ],
+    "displayName": "+# to Level of Socketed Cold Gems",
+    "fracturedStatId": "fractured.stat_1645459191"
   },
   "SocketedFireGemLevel": {
     "type": "Prefix",
@@ -6187,7 +6983,9 @@
         "name": "Flame Spinner's",
         "stat": "+1 to Level of Socketed Fire Gems"
       }
-    ]
+    ],
+    "displayName": "+# to Level of Socketed Fire Gems",
+    "fracturedStatId": "fractured.stat_339179093"
   },
   "SocketedLightningGemLevel": {
     "mods": [
@@ -6202,7 +7000,9 @@
         "stat": "+1 to Level of Socketed Lightning Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of Socketed Lightning Gems",
+    "fracturedStatId": "fractured.stat_4043416969"
   },
   "SocketedMeleeGemLevel": {
     "mods": [
@@ -6217,7 +7017,9 @@
         "stat": "+1 to Level of Socketed Melee Gems"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "+# to Level of Socketed Melee Gems",
+    "fracturedStatId": "fractured.stat_829382474"
   },
   "SpellAddedColdDamage": {
     "mods": [
@@ -6247,7 +7049,9 @@
         "stat": "Adds (24-30) to (45-53) Cold Damage to Spells"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Cold Damage to Spells",
+    "fracturedStatId": "fractured.stat_2469416729"
   },
   "SpellAddedColdDamage2": {
     "mods": [
@@ -6277,7 +7081,9 @@
         "stat": "Adds (16-20) to (30-36) Cold Damage to Spells"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Cold Damage to Spells",
+    "fracturedStatId": "fractured.stat_2469416729"
   },
   "SpellAddedFireDamage": {
     "mods": [
@@ -6307,7 +7113,9 @@
         "stat": "Adds (25-33) to (50-59) Fire Damage to Spells"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Fire Damage to Spells",
+    "fracturedStatId": "fractured.stat_1133016593"
   },
   "SpellAddedFireDamage2": {
     "mods": [
@@ -6337,7 +7145,9 @@
         "stat": "Adds (19-25) to (37-44) Fire Damage to Spells"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Fire Damage to Spells",
+    "fracturedStatId": "fractured.stat_1133016593"
   },
   "SpellAddedLightningDamage": {
     "mods": [
@@ -6367,7 +7177,9 @@
         "stat": "Adds (2-8) to (97-102) Lightning Damage to Spells"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Lightning Damage to Spells",
+    "fracturedStatId": "fractured.stat_2831165374"
   },
   "SpellAddedLightningDamage2": {
     "mods": [
@@ -6397,7 +7209,9 @@
         "stat": "Adds (2-5) to (64-68) Lightning Damage to Spells"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "Adds # to # Lightning Damage to Spells",
+    "fracturedStatId": "fractured.stat_2831165374"
   },
   "SpellBlockPercentage": {
     "mods": [
@@ -6427,7 +7241,9 @@
         "stat": "(6-7)% Chance to Block Spell Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% Chance to Block Spell Damage",
+    "fracturedStatId": "fractured.stat_561307714"
   },
   "SpellCriticalStrikeChanceIncrease": {
     "mods": [
@@ -6457,7 +7273,9 @@
         "stat": "(20-39)% increased Spell Critical Strike Chance"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Spell Critical Strike Chance",
+    "fracturedStatId": "fractured.stat_737908626"
   },
   "SpellDamage": {
     "mods": [
@@ -6487,7 +7305,9 @@
         "stat": "(3-7)% increased Spell Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Spell Damage",
+    "fracturedStatId": "fractured.stat_2974417149"
   },
   "SpellDamageAndMana": {
     "mods": [
@@ -6517,7 +7337,18 @@
         "stat": "(23-29)% increased Spell Damage+(36-41) to maximum Mana"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Spell Damage\n+# to maximum Mana",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_2974417149",
+        "text": "#% increased Spell Damage"
+      },
+      {
+        "id": "fractured.stat_1050105434",
+        "text": "+# to maximum Mana"
+      }
+    ]
   },
   "SpellDamageMana": {
     "mods": [
@@ -6547,7 +7378,18 @@
         "stat": "(15-19)% increased Spell Damage+(25-28) to maximum Mana"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Spell Damage\n+# to maximum Mana",
+    "hybridStats": [
+      {
+        "id": "fractured.stat_2974417149",
+        "text": "#% increased Spell Damage"
+      },
+      {
+        "id": "fractured.stat_1050105434",
+        "text": "+# to maximum Mana"
+      }
+    ]
   },
   "SpellPercentage2": {
     "mods": [
@@ -6607,7 +7449,9 @@
         "stat": "(60-84)% increased Spell Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Spell Damage",
+    "fracturedStatId": "fractured.stat_2974417149"
   },
   "SpellPercentage22": {
     "mods": [
@@ -6617,7 +7461,9 @@
         "stat": "(100-109)% increased Cold Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Cold Damage",
+    "fracturedStatId": "fractured.stat_3291658075"
   },
   "SpellPercentageIncreasedFire22": {
     "mods": [
@@ -6627,7 +7473,9 @@
         "stat": "(100-109)% increased Fire Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Fire Damage",
+    "fracturedStatId": "fractured.stat_3962278098"
   },
   "SpellPercentageIncreasedLightning22": {
     "mods": [
@@ -6637,7 +7485,9 @@
         "stat": "(100-109)% increased Lightning Damage"
       }
     ],
-    "type": "Prefix"
+    "type": "Prefix",
+    "displayName": "#% increased Lightning Damage",
+    "fracturedStatId": "fractured.stat_2231156303"
   },
   "Strength": {
     "mods": [
@@ -6667,7 +7517,9 @@
         "stat": "+(28-32) to Strength"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+# to Strength",
+    "fracturedStatId": "fractured.stat_4080418644"
   },
   "Strength2": {
     "mods": [
@@ -6697,7 +7549,9 @@
         "stat": "+(33-37) to Strength"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "+# to Strength",
+    "fracturedStatId": "fractured.stat_4080418644"
   },
   "StunDurationIncreasePercent": {
     "mods": [
@@ -6727,7 +7581,9 @@
         "stat": "(11-15)% increased Stun Duration on Enemies"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Stun Duration on Enemies",
+    "fracturedStatId": "fractured.stat_2517001139"
   },
   "StunRecovery": {
     "mods": [
@@ -6757,7 +7613,9 @@
         "stat": "(14-16)% increased Stun and Block Recovery"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% increased Stun and Block Recovery",
+    "fracturedStatId": "fractured.stat_2511217560"
   },
   "StunThresholdReduction": {
     "mods": [
@@ -6787,6 +7645,367 @@
         "stat": "(5-7)% reduced Enemy Stun Threshold"
       }
     ],
-    "type": "Suffix"
+    "type": "Suffix",
+    "displayName": "#% reduced Enemy Stun Threshold",
+    "fracturedStatId": "fractured.stat_1443060084"
+  },
+  "MinionDamageX": {
+    "type": "Prefix",
+    "mods": [
+      {
+        "tier": "T1",
+        "name": "Duchess's",
+        "stat": "Minions deal (37\u201342)% increased Damage"
+      },
+      {
+        "tier": "T2",
+        "name": "Countess's",
+        "stat": "Minions deal (31\u201336)% increased Damage"
+      },
+      {
+        "tier": "T3",
+        "name": "Marchioness's",
+        "stat": "Minions deal (21\u201330)% increased Damage"
+      },
+      {
+        "tier": "T4",
+        "name": "Viscountess's",
+        "stat": "Minions deal (11\u201320)% increased Damage"
+      },
+      {
+        "tier": "T5",
+        "name": "Baroness's",
+        "stat": "Minions deal (5\u201310)% increased Damage"
+      }
+    ],
+    "displayName": "Minions deal #% increased Damage",
+    "fracturedStatId": "fractured.stat_1589917703"
+  },
+  "MinionAttackSpeedAndCastSpeedX": {
+    "type": "Suffix",
+    "mods": [
+      {
+        "tier": "T1",
+        "name": "of Agitation",
+        "stat": "Minions have (14\u201316)% increased Attack and Cast Speed"
+      },
+      {
+        "tier": "T2",
+        "name": "of Incitation",
+        "stat": "Minions have (11\u201313)% increased Attack and Cast Speed"
+      },
+      {
+        "tier": "T3",
+        "name": "of Coercion",
+        "stat": "Minions have (8\u201310)% increased Attack and Cast Speed"
+      },
+      {
+        "tier": "T4",
+        "name": "of Motivation",
+        "stat": "Minions have (5\u20137)% increased Attack and Cast Speed"
+      }
+    ],
+    "displayName": "Minions have #% increased Attack and Cast Speed",
+    "fracturedStatId": "fractured.stat_3091578504"
+  },
+  "MinionLifeX": {
+    "type": "Suffix",
+    "mods": [
+      {
+        "tier": "T1",
+        "name": "of the Taskmaster",
+        "stat": "Minions have (28\u201332)% increased maximum Life"
+      },
+      {
+        "tier": "T2",
+        "name": "of the Overseer",
+        "stat": "Minions have (23\u201327)% increased maximum Life"
+      },
+      {
+        "tier": "T3",
+        "name": "of the Rector",
+        "stat": "Minions have (18\u201322)% increased maximum Life"
+      },
+      {
+        "tier": "T4",
+        "name": "of the Administrator",
+        "stat": "Minions have (13\u201317)% increased maximum Life"
+      }
+    ],
+    "displayName": "Minions have #% increased maximum Life",
+    "fracturedStatId": "fractured.stat_770672621"
+  },
+  "MinionMovementSpeedX": {
+    "type": "Suffix",
+    "mods": [
+      {
+        "tier": "T1",
+        "name": "of Harmony",
+        "stat": "Minions have (26\u201330)% increased Movement Speed"
+      },
+      {
+        "tier": "T2",
+        "name": "of Orchestration",
+        "stat": "Minions have (21\u201325)% increased Movement Speed"
+      },
+      {
+        "tier": "T3",
+        "name": "of Integration",
+        "stat": "Minions have (16\u201320)% increased Movement Speed"
+      },
+      {
+        "tier": "T4",
+        "name": "of Collaboration",
+        "stat": "Minions have (11\u201315)% increased Movement Speed"
+      },
+      {
+        "tier": "T5",
+        "name": "of Coordination",
+        "stat": "Minions have (6\u201310)% increased Movement Speed"
+      }
+    ],
+    "displayName": "Minions have #% increased Movement Speed",
+    "fracturedStatId": "fractured.stat_174664100"
+  },
+  "MinionElementalResistancesX": {
+    "type": "Suffix",
+    "mods": [
+      {
+        "tier": "T1",
+        "name": "of Metamorphosis",
+        "stat": "Minions have +(27\u201330)% to all Elemental Resistances"
+      },
+      {
+        "tier": "T2",
+        "name": "of Evolution",
+        "stat": "Minions have +(24\u201326)% to all Elemental Resistances"
+      },
+      {
+        "tier": "T3",
+        "name": "of Adaptation",
+        "stat": "Minions have +(21\u201323)% to all Elemental Resistances"
+      },
+      {
+        "tier": "T4",
+        "name": "of Acclimatisation",
+        "stat": "Minions have +(16\u201320)% to all Elemental Resistances"
+      },
+      {
+        "tier": "T5",
+        "name": "of Adjustment",
+        "stat": "Minions have +(11\u201315)% to all Elemental Resistances"
+      }
+    ],
+    "displayName": "Minions have +#% to all Elemental Resistances",
+    "fracturedStatId": "fractured.stat_1423639565"
+  },
+  "IncreaseSocketedGemLevelX": {
+    "type": "Prefix",
+    "mods": [
+      {
+        "tier": "T1",
+        "name": "Flawless",
+        "stat": "+3 to Level of Socketed Gems"
+      },
+      {
+        "tier": "T2",
+        "name": "Quintessential",
+        "stat": "+2 to Level of Socketed Gems"
+      },
+      {
+        "tier": "T3",
+        "name": "Exemplary",
+        "stat": "+1 to Level of Socketed Gems"
+      }
+    ],
+    "displayName": "+# to Level of Socketed Gems",
+    "fracturedStatId": "fractured.stat_2843100721"
+  },
+  "MinionDamageX2": {
+    "type": "Prefix",
+    "mods": [
+      {
+        "tier": "T1",
+        "name": "Empress's",
+        "stat": "Minions deal (100\u2013109)% increased Damage"
+      },
+      {
+        "tier": "T2",
+        "name": "Queen's",
+        "stat": "Minions deal (85\u201399)% increased Damage"
+      },
+      {
+        "tier": "T3",
+        "name": "Princess's",
+        "stat": "Minions deal (70\u201384)% increased Damage"
+      },
+      {
+        "tier": "T4",
+        "name": "Duchess's",
+        "stat": "Minions deal (55\u201369)% increased Damage"
+      },
+      {
+        "tier": "T5",
+        "name": "Countess's",
+        "stat": "Minions deal (40\u201354)% increased Damage"
+      },
+      {
+        "tier": "T6",
+        "name": "Marchioness's",
+        "stat": "Minions deal (30\u201339)% increased Damage"
+      },
+      {
+        "tier": "T7",
+        "name": "Viscountess's",
+        "stat": "Minions deal (20\u201329)% increased Damage"
+      },
+      {
+        "tier": "T8",
+        "name": "Baroness's",
+        "stat": "Minions deal (10\u201319)% increased Damage"
+      }
+    ],
+    "displayName": "Minions deal #% increased Damage",
+    "fracturedStatId": "fractured.stat_1589917703"
+  },
+  "MinionLifeX2": {
+    "type": "Suffix",
+    "mods": [
+      {
+        "tier": "T1",
+        "name": "of the Despot",
+        "stat": "Minions have (37\u201340)% increased maximum Life"
+      },
+      {
+        "tier": "T2",
+        "name": "of the Slavedriver",
+        "stat": "Minions have (33\u201336)% increased maximum Life"
+      },
+      {
+        "tier": "T3",
+        "name": "of the Taskmaster",
+        "stat": "Minions have (28\u201332)% increased maximum Life"
+      },
+      {
+        "tier": "T4",
+        "name": "of the Overseer",
+        "stat": "Minions have (23\u201327)% increased maximum Life"
+      },
+      {
+        "tier": "T5",
+        "name": "of the Rector",
+        "stat": "Minions have (18\u201322)% increased maximum Life"
+      },
+      {
+        "tier": "T6",
+        "name": "of the Administrator",
+        "stat": "Minions have (13\u201317)% increased maximum Life"
+      }
+    ],
+    "displayName": "Minions have #% increased maximum Life",
+    "fracturedStatId": "fractured.stat_770672621"
+  },
+  "MinionElementalResistancesX2": {
+    "type": "Suffix",
+    "mods": [
+      {
+        "tier": "T1",
+        "name": "of Metamorphosis",
+        "stat": "Minions have +(27\u201330)% to all Elemental Resistances"
+      },
+      {
+        "tier": "T2",
+        "name": "of Evolution",
+        "stat": "Minions have +(24\u201326)% to all Elemental Resistances"
+      },
+      {
+        "tier": "T3",
+        "name": "of Adaptation",
+        "stat": "Minions have +(21\u201323)% to all Elemental Resistances"
+      },
+      {
+        "tier": "T4",
+        "name": "of Acclimatisation",
+        "stat": "Minions have +(16\u201320)% to all Elemental Resistances"
+      },
+      {
+        "tier": "T5",
+        "name": "of Adjustment",
+        "stat": "Minions have +(11\u201315)% to all Elemental Resistances"
+      }
+    ],
+    "displayName": "Minions have +#% to all Elemental Resistances",
+    "fracturedStatId": "fractured.stat_1423639565"
+  },
+  "MinionPhysicalDamageReductionX2": {
+    "type": "Suffix",
+    "mods": [
+      {
+        "tier": "T1",
+        "name": "of the Phalanx",
+        "stat": "physical,minion500 Minions have (13\u201315)% additional Physical Damage Reduction"
+      },
+      {
+        "tier": "T2",
+        "name": "of the Brigade",
+        "stat": "physical,minion500 Minions have (10\u201312)% additional Physical Damage Reduction"
+      },
+      {
+        "tier": "T3",
+        "name": "of the Guard",
+        "stat": "physical,minion500 Minions have (7\u20139)% additional Physical Damage Reduction"
+      }
+    ],
+    "displayName": "Minions have #% additional Physical Damage Reduction",
+    "fracturedStatId": "fractured.stat_3119612865"
+  },
+  "MinionCriticalStrikeChanceX2": {
+    "type": "Suffix",
+    "mods": [
+      {
+        "tier": "T1",
+        "name": "of Destiny",
+        "stat": "Minions have (100\u2013109)% increased Critical Strike Chance"
+      },
+      {
+        "tier": "T2",
+        "name": "of Determinism",
+        "stat": "Minions have (80\u201399)% increased Critical Strike Chance"
+      },
+      {
+        "tier": "T3",
+        "name": "of Serendipity",
+        "stat": "Minions have (60\u201379)% increased Critical Strike Chance"
+      },
+      {
+        "tier": "T4",
+        "name": "of Providence",
+        "stat": "Minions have (40\u201359)% increased Critical Strike Chance"
+      },
+      {
+        "tier": "T5",
+        "name": "of Fortune",
+        "stat": "Minions have (20\u201339)% increased Critical Strike Chance"
+      },
+      {
+        "tier": "T6",
+        "name": "of Luck",
+        "stat": "Minions have (10\u201319)% increased Critical Strike Chance"
+      }
+    ],
+    "displayName": "Minions have #% increased Critical Strike Chance",
+    "fracturedStatId": "fractured.stat_491450213"
+  },
+  "GrantedSkillX2": {
+    "type": "Suffix",
+    "mods": [
+      {
+        "tier": "T1",
+        "name": "of the Convocation",
+        "stat": "Grants Level 1 Convocation Skill"
+      }
+    ],
+    "displayName": "Grants Level # Convocation Skill",
+    "fracturedStatId": "fractured.stat_1786401772"
   }
 }
