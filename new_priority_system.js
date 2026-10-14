@@ -1,5 +1,5 @@
 
-// New priority system based on user requirements
+// New priority system based on user requirements (edit oct 26)
 export function getFamilyPriority(familyName) {
   const priorities = {
   "MovementVelocity": 1,
